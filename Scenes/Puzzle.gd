@@ -6,7 +6,7 @@ extends Node
 func _ready():
 	randomize()
 	var solution = randi() % 4 # random int between 0 and 3
-	print(solution)
+	$Solution.text = str(solution)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
