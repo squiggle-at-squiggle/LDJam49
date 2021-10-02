@@ -15,12 +15,20 @@ func _ready():
 #func _process(delta):
 #	pass
 
+func NewGame():
+	$StartScreen/Control.hide()
+	$EndScreen/Control.hide()
+
 
 func LoseGame():
 	$EndScreen.SetText("You lose!")
-	$EndScreen.ShowScreen()
+	$EndScreen/Control.show()
+	yield(get_tree().create_timer(3), "timeout")
+	$StartScreen/Control.show()
 
 
 func WinGame():
 	$EndScreen.SetText("You win!")
-	$EndScreen.ShowScreen()
+	$EndScreen/Control.show()
+	yield(get_tree().create_timer(3), "timeout")
+	$StartScreen/Control.show()
