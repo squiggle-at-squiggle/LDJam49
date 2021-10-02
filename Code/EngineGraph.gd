@@ -8,7 +8,6 @@ var t = 0
 	
 
 func _ready():
-	time_start = OS.get_unix_time()
 	update()
 	
 func _process(delta):
