@@ -2,7 +2,9 @@
 
 [ext_resource path="res://Scenes/Puzzle.gd" type="Script" id=1]
 
-[node name="Puzzle" type="Node"]
+[node name="Puzzle" type="Node" groups=[
+"puzzle",
+]]
 script = ExtResource( 1 )
 
 [node name="Instruction" type="Label" parent="."]
