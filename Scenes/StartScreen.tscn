@@ -1,6 +1,16 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Code/StartScreen.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/redline.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Fonts/redlinecondital.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 36
+font_data = ExtResource( 3 )
 
 [node name="StartScreen" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -15,22 +25,27 @@ __meta__ = {
 [node name="ColorRect" type="ColorRect" parent="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.176471, 0.396078, 0.611765, 1 )
+color = Color( 0.2, 0.4, 1, 1 )
 
 [node name="Label" type="Label" parent="Control"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -215.0
+margin_left = -381.5
 margin_top = -110.0
-margin_right = -58.0
-margin_bottom = -79.0
-rect_scale = Vector2( 3, 3 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+margin_right = 381.5
+margin_bottom = 5.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.733333, 0.666667, 0.333333, 1 )
 text = "Warp Engineer Simulator
 "
 align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Button" type="Button" parent="Control"]
 anchor_left = 0.5
@@ -41,6 +56,9 @@ margin_left = -90.0
 margin_top = 40.0
 margin_right = 110.0
 margin_bottom = 90.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 0.8, 0.866667, 1, 1 )
 text = "Start Game"
 __meta__ = {
 "_edit_use_anchors_": false
