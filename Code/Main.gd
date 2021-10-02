@@ -1,10 +1,11 @@
 extends Node
+export(PackedScene) var Puzzle
 
-var puzzle = preload("res://Scenes/Puzzle.tscn")
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 
+var solution1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -18,9 +19,10 @@ func _ready():
 func NewGame():
 	$StartScreen/Control.hide()
 	$EndScreen/Control.hide()
-	var instance = puzzle.instance()
+	var instance = Puzzle.instance()
 	# var instance2 = puzzle.instance()
 	add_child(instance)
+	solution1 = instance.solution
 	# add_child(instance2)
 
 
@@ -39,7 +41,7 @@ func WinGame():
 
 
 func CheckSubmission():
-	if $ControlPanel.submission:
+	if int($ControlPanel.submission) == solution1:
 		WinGame()
 	else:
 		LoseGame()
