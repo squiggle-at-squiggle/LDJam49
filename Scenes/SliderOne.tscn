@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/SliderOne.gd" type="Script" id=1]
+
+[node name="SliderOne" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.0
+margin_right = -954.0
+margin_bottom = -667.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSlider" type="HSlider" parent="."]
+margin_right = 100.0
+margin_bottom = 16.0
+rect_scale = Vector2( 1, 2 )
+max_value = 5.0
+tick_count = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="value_changed" from="HSlider" to="." method="_on_HSlider_value_changed"]
