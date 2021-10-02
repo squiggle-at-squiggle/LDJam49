@@ -27,6 +27,7 @@ func NewGame():
 
 
 func LoseGame():
+	get_tree().call_group("puzzle", "queue_free")
 	$EndScreen.SetText("You lose!")
 	$EndScreen/Control.show()
 	yield(get_tree().create_timer(3), "timeout")
@@ -34,6 +35,7 @@ func LoseGame():
 
 
 func WinGame():
+	get_tree().call_group("puzzle", "queue_free")
 	$EndScreen.SetText("You win!")
 	$EndScreen/Control.show()
 	yield(get_tree().create_timer(3), "timeout")
