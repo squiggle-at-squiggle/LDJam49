@@ -1,11 +1,9 @@
 extends CanvasLayer
 
-signal win
-signal lose
+signal submitted
 
 # Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var submission
 
 
 # Called when the node enters the scene tree for the first time.
@@ -23,3 +21,7 @@ func Win():
 
 func Lose():
 	emit_signal("lose")
+
+
+func _on_Submit_pressed():
+	submission = $Control/TextEdit.text

@@ -20,29 +20,25 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="WinButton" type="Button" parent="Control"]
+[node name="TextEdit" type="TextEdit" parent="Control"]
+anchor_left = 0.5
 anchor_top = 0.5
+anchor_right = 0.5
 anchor_bottom = 0.5
-margin_top = -50.0
-margin_right = 200.0
-margin_bottom = 50.0
-text = "WIN"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_left = -20.0
+margin_top = -20.0
+margin_right = 20.0
+margin_bottom = 20.0
 
-[node name="LoseButton" type="Button" parent="Control"]
-anchor_left = 1.0
+[node name="Submit" type="Button" parent="Control"]
+anchor_left = 0.5
 anchor_top = 0.5
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -200.0
-margin_top = -50.0
-margin_bottom = 50.0
-text = "LOSE"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_left = -50.0
+margin_top = 40.0
+margin_right = 50.0
+margin_bottom = 90.0
+text = "Submit"
 
-[connection signal="pressed" from="Control/WinButton" to="." method="Win"]
-[connection signal="pressed" from="Control/LoseButton" to="." method="Lose"]
+[connection signal="pressed" from="Control/Submit" to="." method="_on_Submit_pressed"]
