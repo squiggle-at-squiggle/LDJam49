@@ -1,12 +1,14 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Code/Main.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/ControlPanel.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/EndScreen.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/StartScreen.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Puzzle.tscn" type="PackedScene" id=5]
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
+Puzzle = ExtResource( 5 )
 
 [node name="ControlPanel" parent="." instance=ExtResource( 2 )]
 
