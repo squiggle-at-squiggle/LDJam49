@@ -40,5 +40,8 @@ margin_top = 40.0
 margin_right = 50.0
 margin_bottom = 90.0
 text = "Submit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="pressed" from="Control/Submit" to="." method="_on_Submit_pressed"]
