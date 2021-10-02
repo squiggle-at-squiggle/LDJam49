@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Code/ControlPanel.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/SliderOne.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/EngineGraph.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/PlayerScreen.tscn" type="PackedScene" id=4]
 
 [node name="ControlPanel" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -45,7 +45,8 @@ margin_top = 358.624
 margin_right = -463.682
 margin_bottom = -308.376
 
-[node name="EngineGraph" parent="Control" instance=ExtResource( 3 )]
+[node name="PlayerScreen" parent="Control" instance=ExtResource( 4 )]
+position = Vector2( 100, 150 )
 
 [connection signal="pressed" from="Control/Submit" to="." method="_on_Submit_pressed"]
 [connection signal="changed" from="Control/SliderOne" to="." method="_on_SliderOne_changed"]

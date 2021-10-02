@@ -1,9 +1,9 @@
 extends Node2D
 
-onready var a = 1
-onready var b = 4
-onready var c = 1
-onready var d = 1
+var a = 1
+var b = 0
+var c = 1
+var d = 1
 var t = 0
 	
 
@@ -21,7 +21,6 @@ func _draw():
 	var expression_format = "%s*sin(%s*x + %s) + %s*cos(%s*x + %s)"
 	var formatted_expression = expression_format % [str(a), str(b), str(t), str(c), str(d), str(t)]
 	var err = expression.parse(formatted_expression, input_names)
-	print(str(err))
 	if err != OK:
 		print("Error parsing the formula: ", err)
 		return
