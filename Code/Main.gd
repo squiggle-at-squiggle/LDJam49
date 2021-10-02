@@ -36,3 +36,10 @@ func WinGame():
 	$EndScreen/Control.show()
 	yield(get_tree().create_timer(3), "timeout")
 	$StartScreen/Control.show()
+
+
+func CheckSubmission():
+	if $ControlPanel.submission:
+		WinGame()
+	else:
+		LoseGame()
