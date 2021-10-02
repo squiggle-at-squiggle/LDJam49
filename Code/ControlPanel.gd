@@ -25,4 +25,5 @@ func Lose():
 
 func _on_Submit_pressed():
 	submission = $Control/TextEdit.text
+	$Control/TextEdit.text = ''
 	emit_signal("submitted")
