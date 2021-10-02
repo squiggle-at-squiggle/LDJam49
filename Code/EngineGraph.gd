@@ -4,8 +4,6 @@ onready var a = 1
 onready var b = 4
 onready var c = 1
 onready var d = 1
-var time_start = 0
-var time_now = 0
 var t = 0
 	
 
