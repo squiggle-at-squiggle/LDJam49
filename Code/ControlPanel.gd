@@ -14,8 +14,5 @@ func _ready():
 #	pass
 
 func _on_Submit_pressed():
-	print("you clicked the button")
-	#submission = $Control/TextEdit.text
-	#$Control/TextEdit.text = ''
 	submission = $Control/SliderOne/HSlider.value
 	emit_signal("submitted")
