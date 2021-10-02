@@ -7,9 +7,7 @@ var submission = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Control/EngineGraph.draw_from_puzzle(submission)
-	pass # Replace with function body.
-	
+	$Control/PlayerScreen.draw_from_puzzle(submission)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -21,4 +19,4 @@ func _on_Submit_pressed():
 
 
 func _on_SliderOne_changed():
-	$Control/EngineGraph.draw_from_puzzle($Control/SliderOne/HSlider.value)
+	$Control/PlayerScreen.draw_from_puzzle($Control/SliderOne/HSlider.value)
