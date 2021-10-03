@@ -70,7 +70,10 @@ func _draw():
 		# Remember last value so we can draw a line in the next iteration
 		prev_pixel_y = pixel_y
 
-func draw_from_puzzle( value1, value2 ):
+func draw_from_puzzle( value1, value2, value3, value4, value5 ):
 	b = 2* value1
 	c = value2
+	a = value3
+	d = value4
+	t = value5
 	update()

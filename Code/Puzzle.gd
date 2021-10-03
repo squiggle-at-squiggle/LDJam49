@@ -5,6 +5,9 @@ extends Node
 # Declare member variables here. Examples:
 var solution
 var solution2
+var solution3
+var solution4
+var solution5
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
@@ -14,7 +17,10 @@ func _ready():
 func generate_puzzle(slider_min, slider_max):
 	solution = randi() % (int(slider_max) + 1) + int(slider_min)
 	solution2 = randi() % (int(slider_max) + 1) + int(slider_min)
-	$EngineGraph.draw_from_puzzle(solution,solution2)
+	solution3 = randi() % (int(slider_max) + 1) + int(slider_min)
+	solution4 = randi() % (int(slider_max) + 1) + int(slider_min)
+	solution5 = randi() % (int(slider_max) + 1) + int(slider_min)
+	$EngineGraph.draw_from_puzzle(solution,solution2,solution3,solution4,solution5)
 	$Solution.text = str(solution)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
