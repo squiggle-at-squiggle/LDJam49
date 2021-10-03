@@ -8,8 +8,11 @@
 [ext_resource path="res://Scenes/Countdown.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Sound/sfw-interior-drone-louder.mp3" type="AudioStream" id=7]
 
-[node name="Main" type="Node"]
+[node name="Main" type="Control"]
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 Puzzle = ExtResource( 5 )
 
 [node name="ControlPanel" parent="." instance=ExtResource( 2 )]
