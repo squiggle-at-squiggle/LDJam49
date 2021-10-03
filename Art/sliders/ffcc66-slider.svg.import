@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dumb-knob.png-374551f06b8578697095d7df70953926.stex"
+path="res://.import/ffcc66-slider.svg-910c8f6b2c31cbfffaeb177a6c6c30ed.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/dumb-knob.png"
-dest_files=[ "res://.import/dumb-knob.png-374551f06b8578697095d7df70953926.stex" ]
+source_file="res://Art/sliders/ffcc66-slider.svg"
+dest_files=[ "res://.import/ffcc66-slider.svg-910c8f6b2c31cbfffaeb177a6c6c30ed.stex" ]
 
 [params]
 
