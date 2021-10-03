@@ -23,7 +23,7 @@ func NewGame():
 	instance.generate_puzzle($ControlPanel/Control/SliderOne/HSlider.min_value,$ControlPanel/Control/SliderOne/HSlider.max_value)
 	add_child(instance)
 	solution1 = instance.solution
-	$Countdown.set_timer(10)
+	$Countdown.set_timer(30)
 
 
 func LoseGame():
