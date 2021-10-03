@@ -1,10 +1,12 @@
 extends Node2D
 
+export var line_color: String
 var a = 2
 var b = 0
 var c = 4
 var d = 1
 var t = 0
+
 	
 
 func _ready():
@@ -29,8 +31,8 @@ func _draw():
 	# In pixels on screen
 	var pixel_xmin = 0.0
 	var pixel_xmax = 950.0
-	var pixel_ymin = 100.0 # in Godot 2D, Y axis points down, but we want up
-	var pixel_ymax = 0.0
+	var pixel_ymin = 75.0 # in Godot 2D, Y axis points down, but we want up
+	var pixel_ymax = 5.0
 	# Graph area
 	var xmin = -4.0
 	var xmax = 50.0
@@ -62,7 +64,7 @@ func _draw():
 			draw_line(
 				Vector2(pixel_x - 1, prev_pixel_y),
 				Vector2(pixel_x, pixel_y),
-				Color('ff9900'),
+				Color(line_color),
 				4)
 
 		# Remember last value so we can draw a line in the next iteration
