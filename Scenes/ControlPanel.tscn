@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Code/ControlPanel.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/SliderOne.tscn" type="PackedScene" id=2]
@@ -6,6 +6,9 @@
 [ext_resource path="res://Scenes/PlayerScreen.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/SliderTwo.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/MessageBox.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/SliderThree.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/SliderFour.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/SliderFive.tscn" type="PackedScene" id=9]
 
 [node name="ControlPanel" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -33,30 +36,48 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -50.0
-margin_top = 40.0
-margin_right = 50.0
-margin_bottom = 90.0
+margin_left = -5.5
+margin_top = 102.0
+margin_right = 94.5
+margin_bottom = 152.0
 text = "Submit"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="SliderOne" parent="Control" instance=ExtResource( 2 )]
-margin_left = 491.318
-margin_top = 358.624
-margin_right = -463.682
-margin_bottom = -308.376
+margin_left = 71.818
+margin_top = 432.124
+margin_right = -883.182
+margin_bottom = -234.876
 
 [node name="PlayerScreen" parent="Control" instance=ExtResource( 4 )]
 position = Vector2( 75, 225 )
 line_color = "99CCFF"
 
 [node name="SliderTwo" parent="Control" instance=ExtResource( 5 )]
-margin_left = 332.5
-margin_top = 351.5
-margin_right = -622.5
-margin_bottom = -315.5
+margin_left = 63.0
+margin_top = 359.5
+margin_right = -892.0
+margin_bottom = -307.5
+
+[node name="SliderThree" parent="Control" instance=ExtResource( 7 )]
+margin_left = 68.0
+margin_top = 491.0
+margin_right = -887.0
+margin_bottom = -176.0
+
+[node name="SliderFour" parent="Control" instance=ExtResource( 8 )]
+margin_left = 278.0
+margin_top = 486.0
+margin_right = -673.0
+margin_bottom = -178.0
+
+[node name="SliderFive" parent="Control" instance=ExtResource( 9 )]
+margin_left = 277.5
+margin_top = 429.5
+margin_right = -677.5
+margin_bottom = -237.5
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 536.5, 207 )
@@ -70,3 +91,6 @@ scroll_rate = 250
 [connection signal="pressed" from="Control/Submit" to="." method="_on_Submit_pressed"]
 [connection signal="changed" from="Control/SliderOne" to="." method="_on_SliderOne_changed"]
 [connection signal="changed" from="Control/SliderTwo" to="." method="_on_SliderTwo_changed"]
+[connection signal="changed" from="Control/SliderThree" to="." method="_on_SliderThree_changed"]
+[connection signal="changed" from="Control/SliderFour" to="." method="_on_SliderFour_changed"]
+[connection signal="changed" from="Control/SliderFive" to="." method="_on_SliderFive_changed"]
