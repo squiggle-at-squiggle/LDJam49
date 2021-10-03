@@ -81,3 +81,4 @@ func CheckSubmission():
 		new_round()
 	else:
 		LoseGame()
+		round_counter=0
