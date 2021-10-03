@@ -20,11 +20,10 @@ func NewGame():
 	$StartScreen/Control.hide()
 	$EndScreen/Control.hide()
 	var instance = Puzzle.instance()
-	# var instance2 = puzzle.instance()
 	instance.generate_puzzle($ControlPanel/Control/SliderOne/HSlider.min_value,$ControlPanel/Control/SliderOne/HSlider.max_value)
 	add_child(instance)
 	solution1 = instance.solution
-	# add_child(instance2)
+	$Countdown.set_timer(10)
 
 
 func LoseGame():

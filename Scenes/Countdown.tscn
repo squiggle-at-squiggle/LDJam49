@@ -35,3 +35,6 @@ __meta__ = {
 }
 
 [node name="Countdown" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Countdown" to="." method="_on_Countdown_timeout"]

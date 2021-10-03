@@ -3,7 +3,6 @@ extends Control
 signal time_up
 
 # Declare member variables here. Examples:
-var time_remaining
 
 
 # Called when the node enters the scene tree for the first time.
@@ -12,12 +11,16 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	$TimerText.text = str($Countdown.wait_time)
 
 func set_timer(initial_time):
-	time_remaining = initial_time
-	
-	
+	$Countdown.wait_time = initial_time
+
+
 func increase_time(increase_amount):
-	time_remaining += increase_amount
+	$Countdown.wait_time
+
+
+func _on_Countdown_timeout():
+	emit_signal("time_up")
