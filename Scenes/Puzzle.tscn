@@ -27,3 +27,4 @@ __meta__ = {
 }
 
 [node name="EngineGraph" parent="." instance=ExtResource( 2 )]
+position = Vector2( 100, 125 )
