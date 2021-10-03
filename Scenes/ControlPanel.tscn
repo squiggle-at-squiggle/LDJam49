@@ -48,5 +48,12 @@ margin_bottom = -308.376
 [node name="PlayerScreen" parent="Control" instance=ExtResource( 4 )]
 position = Vector2( 100, 150 )
 
+[node name="SliderOne2" parent="Control" instance=ExtResource( 2 )]
+margin_left = 630.5
+margin_top = 359.0
+margin_right = -324.5
+margin_bottom = -308.0
+
 [connection signal="pressed" from="Control/Submit" to="." method="_on_Submit_pressed"]
 [connection signal="changed" from="Control/SliderOne" to="." method="_on_SliderOne_changed"]
+[connection signal="changed" from="Control/SliderOne2" to="." method="_on_SliderOne2_changed"]
