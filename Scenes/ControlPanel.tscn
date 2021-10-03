@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Code/ControlPanel.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/SliderOne.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Art/lcars-viewbox-2.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/PlayerScreen.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/SliderTwo.tscn" type="PackedScene" id=5]
 
 [node name="ControlPanel" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -50,11 +51,11 @@ margin_bottom = -308.376
 position = Vector2( 75, 225 )
 line_color = "99CCFF"
 
-[node name="SliderOne2" parent="Control" instance=ExtResource( 2 )]
-margin_left = 630.5
-margin_top = 359.0
-margin_right = -324.5
-margin_bottom = -308.0
+[node name="SliderTwo" parent="Control" instance=ExtResource( 5 )]
+margin_left = 332.5
+margin_top = 351.5
+margin_right = -622.5
+margin_bottom = -315.5
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 536.5, 207 )
@@ -63,4 +64,4 @@ texture = ExtResource( 3 )
 
 [connection signal="pressed" from="Control/Submit" to="." method="_on_Submit_pressed"]
 [connection signal="changed" from="Control/SliderOne" to="." method="_on_SliderOne_changed"]
-[connection signal="changed" from="Control/SliderOne2" to="." method="_on_SliderOne2_changed"]
+[connection signal="changed" from="Control/SliderTwo" to="." method="_on_SliderTwo_changed"]
