@@ -48,6 +48,7 @@ margin_bottom = -308.376
 
 [node name="PlayerScreen" parent="Control" instance=ExtResource( 4 )]
 position = Vector2( 75, 225 )
+line_color = "99CCFF"
 
 [node name="SliderOne2" parent="Control" instance=ExtResource( 2 )]
 margin_left = 630.5
