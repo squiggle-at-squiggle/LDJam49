@@ -78,7 +78,7 @@ margin_top = 296.0
 margin_right = 886.0
 margin_bottom = 437.0
 custom_fonts/font = SubResource( 3 )
-custom_colors/font_color = Color( 0.8, 0.4, 0.6, 1 )
+custom_colors/font_color = Color( 0.8, 0.866667, 1, 1 )
 text = "Use the control panel to create the required frequency for your unstable warp core before time runs out and your ship explodes!"
 autowrap = true
 
