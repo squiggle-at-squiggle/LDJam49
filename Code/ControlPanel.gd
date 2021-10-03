@@ -19,6 +19,7 @@ func _ready():
 #	pass
 
 func _on_Submit_pressed():
+	$ButtonPressSound.play()
 	submission = $Control/SliderOne/HSlider.value
 	submission2 = $Control/SliderTwo/HSlider.value
 	submission3 = $Control/SliderThree/HSlider.value
@@ -28,26 +29,31 @@ func _on_Submit_pressed():
 
 
 func _on_SliderOne_changed():
+	$SliderClickSound.play()
 	$Control/PlayerScreen.draw_from_puzzle($Control/SliderOne/HSlider.value, 
 		$Control/SliderTwo/HSlider.value, $Control/SliderThree/HSlider.value,
 		$Control/SliderFour/HSlider.value, $Control/SliderFive/HSlider.value)
 
 func _on_SliderTwo_changed():
+	$SliderClickSound.play()
 	$Control/PlayerScreen.draw_from_puzzle($Control/SliderOne/HSlider.value, 
 		$Control/SliderTwo/HSlider.value, $Control/SliderThree/HSlider.value,
 		$Control/SliderFour/HSlider.value, $Control/SliderFive/HSlider.value)
 
 func _on_SliderThree_changed():
+	$SliderClickSound.play()
 	$Control/PlayerScreen.draw_from_puzzle($Control/SliderOne/HSlider.value, 
 		$Control/SliderTwo/HSlider.value, $Control/SliderThree/HSlider.value,
 		$Control/SliderFour/HSlider.value, $Control/SliderFive/HSlider.value)
 
 func _on_SliderFive_changed():
+	$SliderClickSound.play()
 	$Control/PlayerScreen.draw_from_puzzle($Control/SliderOne/HSlider.value, 
 		$Control/SliderTwo/HSlider.value, $Control/SliderThree/HSlider.value,
 		$Control/SliderFour/HSlider.value, $Control/SliderFive/HSlider.value)
 
 func _on_SliderFour_changed():
+	$SliderClickSound.play()
 	$Control/PlayerScreen.draw_from_puzzle($Control/SliderOne/HSlider.value, 
 		$Control/SliderTwo/HSlider.value, $Control/SliderThree/HSlider.value,
 		$Control/SliderFour/HSlider.value, $Control/SliderFive/HSlider.value)
