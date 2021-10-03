@@ -28,7 +28,7 @@ func _draw():
 	# Choose graph dimensions and scales:
 	# In pixels on screen
 	var pixel_xmin = 0.0
-	var pixel_xmax = 800.0
+	var pixel_xmax = 350.0
 	var pixel_ymin = 50.0 # in Godot 2D, Y axis points down, but we want up
 	var pixel_ymax = 0.0
 	# Graph area
@@ -68,6 +68,7 @@ func _draw():
 		# Remember last value so we can draw a line in the next iteration
 		prev_pixel_y = pixel_y
 
-func draw_from_puzzle( value1 ):
+func draw_from_puzzle( value1, value2 ):
 	b = 2* value1
+	c = value2
 	update()
