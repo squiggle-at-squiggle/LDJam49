@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Code/ControlPanel.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/SliderOne.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Art/lcars-viewbox-2.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/PlayerScreen.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/SliderTwo.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/MessageBox.tscn" type="PackedScene" id=6]
 
 [node name="ControlPanel" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -61,6 +62,10 @@ margin_bottom = -315.5
 position = Vector2( 536.5, 207 )
 scale = Vector2( 0.854167, 0.7575 )
 texture = ExtResource( 3 )
+
+[node name="MessageBox" parent="." instance=ExtResource( 6 )]
+position = Vector2( 0, 660 )
+scroll_rate = 250
 
 [connection signal="pressed" from="Control/Submit" to="." method="_on_Submit_pressed"]
 [connection signal="changed" from="Control/SliderOne" to="." method="_on_SliderOne_changed"]
