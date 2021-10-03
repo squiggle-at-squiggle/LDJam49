@@ -23,5 +23,8 @@ func increase_time(increase_amount):
 	$Countdown.wait_time
 
 
+func stop_timer():
+	$Countdown.stop()
+
 func _on_Countdown_timeout():
 	emit_signal("time_up")
