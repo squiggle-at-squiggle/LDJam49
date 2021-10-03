@@ -29,6 +29,7 @@ func NewGame():
 
 func LoseGame():
 	$EngineNoise.stop()
+	$Countdown.turn_off()
 	get_tree().call_group("puzzle", "queue_free")
 	$EndScreen.SetText("You lose!")
 	$EndScreen/Control.show()
@@ -39,6 +40,7 @@ func LoseGame():
 
 func WinGame():
 	$EngineNoise.stop()
+	$Countdown.turn_off()
 	get_tree().call_group("puzzle", "queue_free")
 	$Countdown.stop_timer()
 	$EndScreen.SetText("You win!")
