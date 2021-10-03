@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Drawing-11.sketchpad.png-61442c2b22e7d62197eaadb8cd8dc57f.stex"
+path="res://.import/lcars-viewbox1.png-cde281c3fb386eacc456719d63649fc2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Drawing-11.sketchpad.png"
-dest_files=[ "res://.import/Drawing-11.sketchpad.png-61442c2b22e7d62197eaadb8cd8dc57f.stex" ]
+source_file="res://Art/lcars-viewbox1.png"
+dest_files=[ "res://.import/lcars-viewbox1.png-cde281c3fb386eacc456719d63649fc2.stex" ]
 
 [params]
 
