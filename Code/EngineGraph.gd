@@ -73,7 +73,6 @@ func _draw():
 func draw_from_puzzle( value1, value2, value3, value4, value5 ):
 	b = 2* value1
 	c = value2
-	a = value3
-	d = value4
-	t = value5
+	a = value3 * value5
+	d = 2 * value4
 	update()
