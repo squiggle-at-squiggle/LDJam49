@@ -12,10 +12,11 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$TimerText.text = str($Countdown.wait_time)
+	$TimerText.text = str(floor($Countdown.time_left))
 
 func set_timer(initial_time):
 	$Countdown.wait_time = initial_time
+	$Countdown.start()
 
 
 func increase_time(increase_amount):
