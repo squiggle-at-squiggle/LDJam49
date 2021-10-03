@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sfx-fanfare.mp3-a465d38a79230c59e4426adf27ebe52b.mp3str"
+
+[deps]
+
+source_file="res://Sound/sfx-fanfare.mp3"
+dest_files=[ "res://.import/sfx-fanfare.mp3-a465d38a79230c59e4426adf27ebe52b.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sfw-interior-drone-louder.mp3-3f06471bf23bdca413e34b977cd2aa66.mp3str"
+
+[deps]
+
+source_file="res://Sound/sfw-interior-drone-louder.mp3"
+dest_files=[ "res://.import/sfw-interior-drone-louder.mp3-3f06471bf23bdca413e34b977cd2aa66.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
