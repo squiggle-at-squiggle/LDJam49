@@ -21,7 +21,7 @@ __meta__ = {
 }
 
 [node name="ColorRect" type="Sprite" parent="Control"]
-position = Vector2( 313.719, 129.243 )
+position = Vector2( 554.052, 400.587 )
 texture = ExtResource( 5 )
 
 [node name="MessageText" type="Label" parent="Control"]

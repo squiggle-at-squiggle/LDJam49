@@ -37,7 +37,13 @@ func _on_Countdown_timeout():
 func alarm_on():
 	if !$AudioStreamPlayer.playing:
 		$AudioStreamPlayer.play()
-		
+
+
 func alarm_off():
 	if $AudioStreamPlayer.playing:
 		$AudioStreamPlayer.stop()
+
+
+func turn_off():
+	$AudioStreamPlayer.stop()
+	active = false
