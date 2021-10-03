@@ -5,6 +5,7 @@ export(PackedScene) var Puzzle
 var total_rounds = 3
 var round_counter = 0
 var current_puzzle
+var background
 var solution1
 var solution2
 var solution3
@@ -31,6 +32,7 @@ func LoseGame():
 	$EngineNoise.stop()
 	$Countdown.turn_off()
 	get_tree().call_group("puzzle", "queue_free")
+	get_tree().call_group("background", "queue_free")
 	$EndScreen.SetText("You lose!")
 	$EndScreen/Control.show()
 	$EndScreen/FailureSound.play()
@@ -42,6 +44,7 @@ func WinGame():
 	$EngineNoise.stop()
 	$Countdown.turn_off()
 	get_tree().call_group("puzzle", "queue_free")
+	get_tree().call_group("background", "queue_free")
 	$Countdown.stop_timer()
 	$EndScreen.SetText("You win!")
 	$EndScreen/Control.show()
@@ -72,7 +75,6 @@ func verify_solution():
 		return true
 	else:
 		return false
-	
 
 
 func CheckSubmission():
