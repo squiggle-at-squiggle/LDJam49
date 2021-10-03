@@ -19,22 +19,27 @@ func _ready():
 func NewGame():
 	$StartScreen/Control.hide()
 	$EndScreen/Control.hide()
+	$EngineNoise.play(3)
 	new_round()
 
 
 func LoseGame():
+	$EngineNoise.stop()
 	get_tree().call_group("puzzle", "queue_free")
 	$EndScreen.SetText("You lose!")
 	$EndScreen/Control.show()
+	$EndScreen/FailureSound.play()
 	yield(get_tree().create_timer(3), "timeout")
 	$StartScreen/Control.show()
 
 
 func WinGame():
+	$EngineNoise.stop()
 	get_tree().call_group("puzzle", "queue_free")
 	$Countdown.stop_timer()
 	$EndScreen.SetText("You win!")
 	$EndScreen/Control.show()
+	$EndScreen/SuccessSound.play()
 	yield(get_tree().create_timer(3), "timeout")
 	$StartScreen/Control.show()
 	

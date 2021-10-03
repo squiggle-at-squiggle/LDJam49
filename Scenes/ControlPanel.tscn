@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Code/ControlPanel.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/SliderOne.tscn" type="PackedScene" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://Scenes/SliderThree.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/SliderFour.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/SliderFive.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Sound/sfx-slide-click.mp3" type="AudioStream" id=10]
+[ext_resource path="res://Sound/sfx-button-press.mp3" type="AudioStream" id=11]
 
 [node name="ControlPanel" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -87,6 +89,12 @@ texture = ExtResource( 3 )
 [node name="MessageBox" parent="." instance=ExtResource( 6 )]
 position = Vector2( 0, 660 )
 scroll_rate = 250
+
+[node name="SliderClickSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+
+[node name="ButtonPressSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
 
 [connection signal="pressed" from="Control/Submit" to="." method="_on_Submit_pressed"]
 [connection signal="changed" from="Control/SliderOne" to="." method="_on_SliderOne_changed"]
