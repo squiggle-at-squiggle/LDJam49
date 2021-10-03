@@ -30,14 +30,14 @@ func _draw():
 	# Choose graph dimensions and scales:
 	# In pixels on screen
 	var pixel_xmin = 0.0
-	var pixel_xmax = 950.0
+	var pixel_xmax = 600.0
 	var pixel_ymin = 75.0 # in Godot 2D, Y axis points down, but we want up
 	var pixel_ymax = 5.0
 	# Graph area
-	var xmin = -4.0
-	var xmax = 50.0
-	var ymin = -4.0
-	var ymax = 4.0
+	var xmin = -4.5
+	var xmax = 20.0
+	var ymin = -4.5
+	var ymax = 4.5
 
 	var inputs = [0]
 	var prev_pixel_y = null
