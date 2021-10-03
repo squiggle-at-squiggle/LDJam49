@@ -50,7 +50,7 @@ func new_round():
 	current_puzzle.generate_puzzle($ControlPanel/Control/SliderOne/HSlider.min_value,$ControlPanel/Control/SliderOne/HSlider.max_value)
 	add_child(current_puzzle)
 	solution1 = current_puzzle.solution
-	$Countdown.set_timer(30)
+	$Countdown.set_timer(90)
 	round_counter += 1
 	# destroy current_puzzle
 	# create_new_puzzle
@@ -64,3 +64,4 @@ func CheckSubmission():
 		new_round()
 	else:
 		LoseGame()
+		round_counter = 0
