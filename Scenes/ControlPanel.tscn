@@ -50,10 +50,10 @@ __meta__ = {
 }
 
 [node name="SliderOne" parent="Control" instance=ExtResource( 2 )]
-margin_left = 71.818
-margin_top = 432.124
-margin_right = -883.182
-margin_bottom = -234.876
+margin_left = 73.818
+margin_top = 271.624
+margin_right = -881.182
+margin_bottom = -395.376
 
 [node name="PlayerScreen" parent="Control" instance=ExtResource( 4 )]
 position = Vector2( 443, 225 )
@@ -66,22 +66,22 @@ margin_right = -892.0
 margin_bottom = -307.5
 
 [node name="SliderThree" parent="Control" instance=ExtResource( 7 )]
-margin_left = 68.0
-margin_top = 491.0
-margin_right = -887.0
-margin_bottom = -176.0
+margin_left = 62.5
+margin_top = 434.5
+margin_right = -892.5
+margin_bottom = -232.5
 
 [node name="SliderFour" parent="Control" instance=ExtResource( 8 )]
-margin_left = 278.0
-margin_top = 486.0
-margin_right = -673.0
-margin_bottom = -178.0
+margin_left = 67.0
+margin_top = 500.0
+margin_right = -884.0
+margin_bottom = -164.0
 
 [node name="SliderFive" parent="Control" instance=ExtResource( 9 )]
-margin_left = 277.5
-margin_top = 429.5
-margin_right = -677.5
-margin_bottom = -237.5
+margin_left = 64.5
+margin_top = 571.0
+margin_right = -890.5
+margin_bottom = -95.9999
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 461, 130.2 )

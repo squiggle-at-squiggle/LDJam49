@@ -25,6 +25,8 @@ func _on_Submit_pressed():
 	submission3 = $Control/SliderThree/HSlider.value
 	submission4 = $Control/SliderFour/HSlider.value
 	submission5 = $Control/SliderFive/HSlider.value
+	if submission5 == 0:
+		submission5 = -1
 	emit_signal("submitted")
 
 

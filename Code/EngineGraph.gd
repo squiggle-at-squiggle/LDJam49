@@ -71,8 +71,10 @@ func _draw():
 		prev_pixel_y = pixel_y
 
 func draw_from_puzzle( value1, value2, value3, value4, value5 ):
+	if value5 == 0:
+		value5 = -1
 	b = 2* value1
-	c = value2
-	a = value3 * value5
+	c = value2 * value5
+	a = value3 
 	d = 2 * value4
 	update()
