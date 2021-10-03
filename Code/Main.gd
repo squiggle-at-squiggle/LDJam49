@@ -36,6 +36,7 @@ func LoseGame():
 
 func WinGame():
 	get_tree().call_group("puzzle", "queue_free")
+	$Countdown.stop_timer()
 	$EndScreen.SetText("You win!")
 	$EndScreen/Control.show()
 	yield(get_tree().create_timer(3), "timeout")
