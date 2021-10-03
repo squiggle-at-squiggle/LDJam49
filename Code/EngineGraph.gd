@@ -1,8 +1,8 @@
 extends Node2D
 
-var a = 1
+var a = 2
 var b = 0
-var c = 1
+var c = 4
 var d = 1
 var t = 0
 	
