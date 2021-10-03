@@ -12,7 +12,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	$TimerText.text = str(floor($Countdown.time_left))
-	if $Countdown.time_left <= 5 && active:
+	if $Countdown.time_left <= 6 && active:
 		alarm_on()
 	else:
 		alarm_off()
