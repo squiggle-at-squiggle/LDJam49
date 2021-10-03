@@ -2,9 +2,9 @@ extends Node
 export(PackedScene) var Puzzle
 
 # Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
+var total_rounds = 3
+var round_counter = 0
+var current_puzzle
 var solution1
 
 # Called when the node enters the scene tree for the first time.
@@ -19,11 +19,7 @@ func _ready():
 func NewGame():
 	$StartScreen/Control.hide()
 	$EndScreen/Control.hide()
-	var instance = Puzzle.instance()
-	instance.generate_puzzle($ControlPanel/Control/SliderOne/HSlider.min_value,$ControlPanel/Control/SliderOne/HSlider.max_value)
-	add_child(instance)
-	solution1 = instance.solution
-	$Countdown.set_timer(30)
+	new_round()
 
 
 func LoseGame():
@@ -41,10 +37,25 @@ func WinGame():
 	$EndScreen/Control.show()
 	yield(get_tree().create_timer(3), "timeout")
 	$StartScreen/Control.show()
+	
+func new_round():
+	if round_counter >= 1:
+		current_puzzle.queue_free()
+	current_puzzle = Puzzle.instance()
+	current_puzzle.generate_puzzle($ControlPanel/Control/SliderOne/HSlider.min_value,$ControlPanel/Control/SliderOne/HSlider.max_value)
+	add_child(current_puzzle)
+	solution1 = current_puzzle.solution
+	$Countdown.set_timer(30)
+	round_counter += 1
+	# destroy current_puzzle
+	# create_new_puzzle
+	# increment round_counter
 
 
 func CheckSubmission():
-	if int($ControlPanel.submission) == solution1:
+	if int($ControlPanel.submission) == solution1 and total_rounds == round_counter:
 		WinGame()
+	elif int($ControlPanel.submission) == solution1:
+		new_round()
 	else:
 		LoseGame()
