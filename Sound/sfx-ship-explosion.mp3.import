@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sfx-ship-explosion.mp3-cace1b814d9dc7dd2afa5ceb6d7309a0.mp3str"
+
+[deps]
+
+source_file="res://Sound/sfx-ship-explosion.mp3"
+dest_files=[ "res://.import/sfx-ship-explosion.mp3-cace1b814d9dc7dd2afa5ceb6d7309a0.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
