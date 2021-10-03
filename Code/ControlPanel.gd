@@ -16,15 +16,12 @@ func _ready():
 
 func _on_Submit_pressed():
 	submission = $Control/SliderOne/HSlider.value
-	submission2 = $Control/SliderOne2/HSlider.value
+	submission2 = $Control/SliderTwo/HSlider.value
 	emit_signal("submitted")
 
 
 func _on_SliderOne_changed():
-	$Control/PlayerScreen.draw_from_puzzle($Control/SliderOne/HSlider.value, $Control/SliderOne2/HSlider.value)
+	$Control/PlayerScreen.draw_from_puzzle($Control/SliderOne/HSlider.value, $Control/SliderTwo/HSlider.value)
 
-
-func _on_SliderOne2_changed():
-	$Control/PlayerScreen.draw_from_puzzle($Control/SliderOne/HSlider.value, $Control/SliderOne2/HSlider.value)
-
-
+func _on_SliderTwo_changed():
+	$Control/PlayerScreen.draw_from_puzzle($Control/SliderOne/HSlider.value, $Control/SliderTwo/HSlider.value)
