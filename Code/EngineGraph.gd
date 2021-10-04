@@ -36,8 +36,8 @@ func _draw():
 	var pixel_ymin = 75.0 # in Godot 2D, Y axis points down, but we want up
 	var pixel_ymax = 5.0
 	# Graph area
-	var xmin = -4.5
-	var xmax = 20.0
+	var xmin = -3
+	var xmax = 3
 	var ymin = -4.5
 	var ymax = 4.5
 
@@ -76,7 +76,7 @@ func draw_from_puzzle( value1, value2, value3, value4, value5 ):
 	if value5 == 0:
 		value5 = -1
 	b = 2* value1
-	c = value2 * value5
+	c = value2 * value5 * 2
 	a = value3 
 	d = 2 * value4
 	update()
