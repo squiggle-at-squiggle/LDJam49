@@ -65,12 +65,6 @@ func new_round():
 	round_controller()
 	
 func round_controller():
-	#if round_counter == 1:
-	#	$ControlPanel/Control/SliderOne/HSlider.hide()
-	#	$ControlPanel/Control/SliderTwo/HSlider.hide()
-	#	$ControlPanel/Control/SliderThree/HSlider.hide()
-	#	$ControlPanel/Control/SliderFour/HSlider.hide()
-	#	$ControlPanel/Control/SliderFive/HSlider.hide()
 	if round_counter <= 3:
 		$ControlPanel/Control/SliderOne.show()
 		#set submissions 2-5 to correct
@@ -93,6 +87,12 @@ func round_controller():
 		$ControlPanel/Control/SliderFour.show()
 		$ControlPanel/Control/SliderFive.show()
 	
+func hide_all_toggles():
+	$ControlPanel/Control/SliderOne/HSlider.hide()
+	$ControlPanel/Control/SliderTwo/HSlider.hide()
+	$ControlPanel/Control/SliderThree/HSlider.hide()
+	$ControlPanel/Control/SliderFour/HSlider.hide()
+	$ControlPanel/Control/SliderFive/HSlider.hide()
 
 func verify_solution():
 	if int($ControlPanel.submission) == solution1 and int($ControlPanel.submission2) == solution2 and int($ControlPanel.submission3) == solution3 and int($ControlPanel.submission4) == solution4 and int($ControlPanel.submission5) == solution5:
@@ -105,8 +105,10 @@ func CheckSubmission():
 	if verify_solution() and total_rounds == round_counter:
 		WinGame()
 		round_counter=0
+		hide_all_toggles()
 	elif verify_solution():
 		new_round()
 	else:
 		LoseGame()
 		round_counter=0
+		hide_all_toggles()
