@@ -15,6 +15,7 @@
 [ext_resource path="res://Art/shape-does-nothing-2.png" type="Texture" id=13]
 [ext_resource path="res://Art/another-sdn-2.png" type="Texture" id=14]
 [ext_resource path="res://Fonts/button-font.tres" type="DynamicFont" id=15]
+[ext_resource path="res://Scenes/LeftKnobShape.tscn" type="PackedScene" id=16]
 
 [node name="ControlPanel" type="CanvasLayer"]
 script = ExtResource( 1 )
