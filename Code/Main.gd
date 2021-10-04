@@ -61,11 +61,7 @@ func new_round():
 	var message = verb + " the " + TechnoBabble()
 	$ControlPanel/Control/Submit.hide()
 	$Countdown/Countdown.set_paused(true)
-<<<<<<< HEAD
 	$MessageBox.create_message(message, 3)
-=======
-	#$ControlPanel/MessageBox.create_message(message, 3)
->>>>>>> e7d83c20819bb08a79b344a9c27ad392495db264
 	$ControlPanel/Control/Submit.text = verb
 	yield(get_tree().create_timer(3), "timeout")
 	$ControlPanel/Control/Submit.show()
