@@ -48,34 +48,38 @@ position = Vector2( 443, 165 )
 line_color = "99CCFF"
 
 [node name="SliderOne" parent="Control" instance=ExtResource( 2 )]
-margin_left = 82.3492
-margin_top = 227.063
-margin_right = -872.651
-margin_bottom = -439.937
+margin_left = 107.349
+margin_top = 229.563
+margin_right = -847.651
+margin_bottom = -437.437
 
 [node name="SliderTwo" parent="Control" instance=ExtResource( 5 )]
-margin_left = 82.0
-margin_top = 297.854
-margin_right = -873.0
-margin_bottom = -369.146
+visible = false
+margin_left = 107.5
+margin_top = 294.354
+margin_right = -847.5
+margin_bottom = -372.646
 
 [node name="SliderThree" parent="Control" instance=ExtResource( 7 )]
-margin_left = 83.3805
-margin_top = 361.318
-margin_right = -871.62
-margin_bottom = -305.682
+visible = false
+margin_left = 107.381
+margin_top = 363.318
+margin_right = -847.62
+margin_bottom = -303.682
 
 [node name="SliderFour" parent="Control" instance=ExtResource( 8 )]
-margin_left = 80.941
-margin_top = 437.393
-margin_right = -870.059
-margin_bottom = -226.607
+visible = false
+margin_left = 107.441
+margin_top = 434.393
+margin_right = -843.559
+margin_bottom = -229.607
 
 [node name="SliderFive" parent="Control" instance=ExtResource( 9 )]
-margin_left = 86.5018
-margin_top = 508.151
-margin_right = -868.498
-margin_bottom = -158.849
+visible = false
+margin_left = 107.002
+margin_top = 507.651
+margin_right = -847.998
+margin_bottom = -159.349
 
 [node name="Label" type="Label" parent="Control"]
 margin_left = 640.707
