@@ -9,6 +9,6 @@ anchor_left = -0.00565698
 anchor_right = -0.00565698
 margin_left = -0.292877
 margin_right = 117.707
+min_value = 0.0
 max_value = 1.0
 tick_count = 2
-ticks_on_borders = true

@@ -6,4 +6,3 @@
 
 [node name="HSlider" parent="." index="0"]
 margin_right = 124.0
-ticks_on_borders = true
