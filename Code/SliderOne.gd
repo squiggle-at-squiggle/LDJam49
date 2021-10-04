@@ -15,6 +15,6 @@ func _ready():
 #	pass
 
 
-func _on_HSlider_value_changed(value):
+func _on_HSlider_value_changed(_value):
 	emit_signal("changed")
 	# Replace with function body.
