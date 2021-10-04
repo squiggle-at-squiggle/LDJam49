@@ -5,7 +5,7 @@ var a = 2
 var b = 0
 var c = 4
 var d = 1
-var t = 0
+var t
 
 	
 
@@ -13,7 +13,7 @@ func _ready():
 	update()
 	
 func _process(delta):
-	t = t + (delta * 3)
+	t = get_tree().get_root().get_node("Main").get("time")
 	update()
 
 func _draw():

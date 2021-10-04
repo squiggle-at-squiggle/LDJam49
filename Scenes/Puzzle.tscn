@@ -27,5 +27,5 @@ __meta__ = {
 }
 
 [node name="EngineGraph" parent="." instance=ExtResource( 2 )]
-position = Vector2( 443, 100 )
+position = Vector2( 443, 165 )
 line_color = "ff9900"
