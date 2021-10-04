@@ -81,6 +81,7 @@ position = Vector2( 443, 165 )
 line_color = "ff9900"
 
 [node name="SliderOne" parent="Control" instance=ExtResource( 2 )]
+visible = false
 anchor_top = 0.000694444
 anchor_bottom = 1.00069
 margin_left = 107.349
