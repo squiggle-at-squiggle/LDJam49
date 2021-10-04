@@ -22,6 +22,7 @@ func _process(delta):
 	time = time + (3 * delta)
 
 func NewGame():
+	$ControlPanel/Control/PlayerScreen.hide()
 	$StartScreen/Control.hide()
 	$EndScreen/Control.hide()
 	$EngineNoise.play(3)
@@ -54,7 +55,8 @@ func new_round():
 	var verb = Verb()
 	var message = verb + " the " + TechnoBabble()
 	$ControlPanel/MessageBox.create_message(message, 3)
-	$ControlPanel/Control/Submit.text = verb
+	yield(get_tree().create_timer(3), "timeout")
+	$ControlPanel/Control/PlayerScreen.show()
 	if round_counter >= 1:
 		current_puzzle.queue_free()
 	current_puzzle = Puzzle.instance()
@@ -118,10 +120,10 @@ func CheckSubmission():
 		hide_all_toggles()
 
 func Verb():
-	var verb = ["Harmonize", "Fluctuate"]
+	var verb = ["Harmonize", "Fluctuate", "Consolidate"]
 	return verb[randi() % verb.size()]
 
 
 func TechnoBabble():
-	var technoBabble = ["quantum filament", "anti-matter"]
+	var technoBabble = ["quantum filament", "anti-matter", "subsection cryptography"]
 	return technoBabble[randi() % technoBabble.size()]

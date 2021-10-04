@@ -27,7 +27,7 @@ margin_top = -22.5
 margin_right = 441.0
 margin_bottom = 22.5
 custom_fonts/font = ExtResource( 2 )
-text = "Use the controls to stablize the warp crystal"
+text = "Press start to begin"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
