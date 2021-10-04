@@ -25,7 +25,5 @@ custom_icons/grabber = ExtResource( 2 )
 custom_styles/slider = SubResource( 1 )
 custom_styles/grabber_area_highlight = SubResource( 2 )
 custom_styles/grabber_area = SubResource( 3 )
-max_value = 4.0
 value = 2.0
-tick_count = 5
 ticks_on_borders = true

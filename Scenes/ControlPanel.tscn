@@ -41,35 +41,40 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="PlayerScreen" parent="Control" instance=ExtResource( 4 )]
+position = Vector2( 443, 225 )
+line_color = "99CCFF"
+
 [node name="SliderOne" parent="Control" instance=ExtResource( 2 )]
+visible = false
 margin_left = 91.8492
 margin_top = 270.563
 margin_right = -863.151
 margin_bottom = -396.437
 
-[node name="PlayerScreen" parent="Control" instance=ExtResource( 4 )]
-position = Vector2( 443, 225 )
-line_color = "99CCFF"
-
 [node name="SliderTwo" parent="Control" instance=ExtResource( 5 )]
+visible = false
 margin_left = 63.0
 margin_top = 359.854
 margin_right = -892.0
 margin_bottom = -307.146
 
 [node name="SliderThree" parent="Control" instance=ExtResource( 7 )]
+visible = false
 margin_left = 95.3805
 margin_top = 427.318
 margin_right = -859.62
 margin_bottom = -239.682
 
 [node name="SliderFour" parent="Control" instance=ExtResource( 8 )]
+visible = false
 margin_left = 100.941
 margin_top = 480.393
 margin_right = -850.059
 margin_bottom = -183.607
 
 [node name="SliderFive" parent="Control" instance=ExtResource( 9 )]
+visible = false
 margin_left = 99.5018
 margin_top = 536.151
 margin_right = -855.498
@@ -122,6 +127,7 @@ stream = ExtResource( 10 )
 stream = ExtResource( 11 )
 
 [node name="ShapeThingDoesNothing" type="Sprite" parent="."]
+visible = false
 position = Vector2( 329.408, 45.1915 )
 scale = Vector2( 0.520715, 0.294518 )
 texture = ExtResource( 13 )
