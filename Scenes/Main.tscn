@@ -24,10 +24,10 @@ layer = 2
 layer = 2
 
 [node name="Countdown" parent="." instance=ExtResource( 6 )]
-margin_left = 851.0
-margin_top = 524.0
-margin_right = 1021.0
-margin_bottom = 679.0
+margin_left = 809.0
+margin_top = 523.0
+margin_right = 979.0
+margin_bottom = 678.0
 
 [node name="EngineNoise" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )

@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Code/Countdown.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/Digital Play St.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Sound/sfx-warning-alarm.mp3" type="AudioStream" id=3]
+[ext_resource path="res://Fonts/title-font.tres" type="DynamicFont" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 99
@@ -12,6 +13,17 @@ font_data = ExtResource( 2 )
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = -81.0
+margin_top = -14.0
+margin_right = 153.0
+margin_bottom = 11.0
+custom_fonts/font = ExtResource( 4 )
+text = "time remaining"
 __meta__ = {
 "_edit_use_anchors_": false
 }
