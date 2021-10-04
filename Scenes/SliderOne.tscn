@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Code/SliderOne.gd" type="Script" id=1]
 [ext_resource path="res://Art/NewSliders/grabber1and4.png" type="Texture" id=2]
+[ext_resource path="res://Art/NewSliders/left-knob.png" type="Texture" id=3]
 [ext_resource path="res://Art/NewSliders/grabber1and4-highlight.png" type="Texture" id=4]
 [ext_resource path="res://Art/NewSliders/sliderbar1.png" type="Texture" id=5]
 [ext_resource path="res://Art/NewSliders/sliderprogress1.png" type="Texture" id=6]
@@ -49,5 +50,10 @@ ticks_on_borders = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -15.7586, 24.802 )
+scale = Vector2( 0.265034, 0.251178 )
+texture = ExtResource( 3 )
 
 [connection signal="value_changed" from="HSlider" to="." method="_on_HSlider_value_changed"]
