@@ -46,7 +46,7 @@ __meta__ = {
 
 [node name="PlayerScreen" parent="Control" instance=ExtResource( 4 )]
 position = Vector2( 443, 165 )
-line_color = "99CCFF"
+line_color = "ff9900"
 
 [node name="SliderOne" parent="Control" instance=ExtResource( 2 )]
 margin_left = 107.0
