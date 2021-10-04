@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Drawing-27.sketchpad (1).png-b173f865aa89d39b9a41001737922d4b.stex"
+path="res://.import/sliderprogress1.png-5b4e554a9ef2adcfb14687566a8a61c4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Drawing-27.sketchpad (1).png"
-dest_files=[ "res://.import/Drawing-27.sketchpad (1).png-b173f865aa89d39b9a41001737922d4b.stex" ]
+source_file="res://Art/NewSliders/sliderprogress1.png"
+dest_files=[ "res://.import/sliderprogress1.png-5b4e554a9ef2adcfb14687566a8a61c4.stex" ]
 
 [params]
 
