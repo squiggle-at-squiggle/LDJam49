@@ -12,10 +12,13 @@ var solution3
 var solution4
 var solution5
 var gameStarted
+var creditsOpen
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	gameStarted = false
+	creditsOpen = false
+	$EngineNoise.play()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -25,9 +28,11 @@ func _process(delta):
 func NewGame():
 	gameStarted = true
 	$ControlPanel/Control/PlayerScreen.hide()
+	$ControlPanel/Control/Credits.hide()
 	$StartMessage/Control.hide()
 	$EndScreen/Control.hide()
-	$EngineNoise.play(3)
+	if !$EngineNoise.playing:
+		$EngineNoise.play()
 	$Countdown.set_timer(90)
 	new_round()
 
@@ -48,6 +53,7 @@ func LoseGame():
 	$ControlPanel/Control/Submit.text = "Engage"
 	$StartMessage/Control.show()
 	$ControlPanel/Control/Submit.show()
+	$ControlPanel/Control/Credits.show()
 
 
 func WinGame():
@@ -65,6 +71,7 @@ func WinGame():
 	$ControlPanel/Control/Submit.text = "Engage"
 	$StartMessage/Control.show()
 	$ControlPanel/Control/Submit.show()
+	$ControlPanel/Control/Credits.show()
 	
 func new_round():
 	var verb = Verb()
@@ -153,3 +160,12 @@ func Verb():
 func TechnoBabble():
 	var technoBabble = ["quantum filament", "anti-matter", "subsection cryptography"]
 	return technoBabble[randi() % technoBabble.size()]
+
+
+func _on_ControlPanel_credits():
+	if creditsOpen:
+		$Credits/Control.hide()
+		creditsOpen = false
+	else:
+		$Credits/Control.show()
+		creditsOpen = true

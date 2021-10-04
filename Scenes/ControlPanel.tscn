@@ -205,7 +205,6 @@ scale = Vector2( 0.520715, 0.294518 )
 texture = ExtResource( 13 )
 
 [connection signal="pressed" from="Control/Submit" to="." method="_on_Submit_pressed"]
-[connection signal="pressed" from="Control/Credits" to="." method="_on_Submit_pressed"]
 [connection signal="pressed" from="Control/Credits" to="." method="_on_Credits_pressed"]
 [connection signal="changed" from="Control/SliderOne" to="." method="_on_SliderOne_changed"]
 [connection signal="changed" from="Control/SliderTwo" to="." method="_on_SliderTwo_changed"]
