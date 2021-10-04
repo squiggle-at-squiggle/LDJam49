@@ -23,12 +23,12 @@ func _process(delta):
 	time = time + (3 * delta)
 
 func NewGame():
+	gameStarted = true
 	$ControlPanel/Control/PlayerScreen.hide()
 	$StartScreen/Control.hide()
 	$EndScreen/Control.hide()
 	$EngineNoise.play(3)
 	$Countdown.set_timer(90)
-	$Countdown/Countdown.paused = true
 	new_round()
 
 
@@ -60,12 +60,13 @@ func new_round():
 	var verb = Verb()
 	var message = verb + " the " + TechnoBabble()
 	$ControlPanel/Control/Submit.hide()
+	$Countdown/Countdown.set_paused(true)
 	$ControlPanel/MessageBox.create_message(message, 3)
 	$ControlPanel/Control/Submit.text = verb
-	$ControlPanel/Control/Submit.show()
 	yield(get_tree().create_timer(3), "timeout")
+	$ControlPanel/Control/Submit.show()
 	$ControlPanel/Control/PlayerScreen.show()
-	$Countdown/Countdown.paused = false
+	$Countdown/Countdown.set_paused(false)
 	if round_counter >= 1:
 		current_puzzle.queue_free()
 	current_puzzle = Puzzle.instance()
@@ -117,13 +118,16 @@ func verify_solution():
 
 func CheckSubmission():
 	if !gameStarted:
+		$ControlPanel/Control/Submit.hide()
 		NewGame()
 		gameStarted = true
 	elif verify_solution() and total_rounds == round_counter:
+		$ControlPanel/Control/Submit.hide()
 		WinGame()
 		round_counter=0
 		hide_all_toggles()
 	elif verify_solution():
+		$ControlPanel/Control/Submit.hide()
 		$Correct.play()
 		$Countdown.increase_time(15)
 		new_round()

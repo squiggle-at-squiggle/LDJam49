@@ -25,7 +25,7 @@ func set_timer(initial_time):
 
 
 func increase_time(_increase_amount):
-	var increasedAmount = clamp(_increase_amount, 0, 100 - $Countdown.time_left)
+	var increasedAmount = clamp(_increase_amount, 0, 99 - $Countdown.time_left)
 	$Countdown.wait_time = $Countdown.time_left + increasedAmount
 	$Countdown.start()
 
