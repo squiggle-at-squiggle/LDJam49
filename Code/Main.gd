@@ -104,10 +104,10 @@ func round_controller():
 		$ControlPanel/Control/SliderFive.show()
 	
 func hide_all_toggles():
-	$ControlPanel/Control/SliderTwo/HSlider.hide()
-	$ControlPanel/Control/SliderThree/HSlider.hide()
-	$ControlPanel/Control/SliderFour/HSlider.hide()
-	$ControlPanel/Control/SliderFive/HSlider.hide()
+	$ControlPanel/Control/SliderTwo.hide()
+	$ControlPanel/Control/SliderThree.hide()
+	$ControlPanel/Control/SliderFour.hide()
+	$ControlPanel/Control/SliderFive.hide()
 
 func verify_solution():
 	if int($ControlPanel.submission) == solution1 and int($ControlPanel.submission2) == solution2 and int($ControlPanel.submission3) == solution3 and int($ControlPanel.submission4) == solution4 and int($ControlPanel.submission5) == solution5:
