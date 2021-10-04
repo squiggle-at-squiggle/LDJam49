@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Code/Main.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/ControlPanel.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Sound/sfx-success.mp3" type="AudioStream" id=8]
 [ext_resource path="res://Sound/sfx-negative.mp3" type="AudioStream" id=9]
 [ext_resource path="res://Scenes/MessageBox.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Credits.tscn" type="PackedScene" id=11]
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
@@ -43,5 +44,11 @@ layer = 2
 offset = Vector2( 550, 90 )
 transform = Transform2D( 1, 0, 0, 1, 550, 90 )
 
+[node name="Credits" parent="." instance=ExtResource( 11 )]
+layer = 5
+offset = Vector2( 50, 100 )
+transform = Transform2D( 1, 0, 0, 1, 50, 100 )
+
+[connection signal="credits" from="ControlPanel" to="." method="_on_ControlPanel_credits"]
 [connection signal="submitted" from="ControlPanel" to="." method="CheckSubmission"]
 [connection signal="time_up" from="Countdown" to="." method="LoseGame"]
