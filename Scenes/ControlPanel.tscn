@@ -54,28 +54,24 @@ margin_right = -847.651
 margin_bottom = -437.437
 
 [node name="SliderTwo" parent="Control" instance=ExtResource( 5 )]
-visible = false
 margin_left = 107.5
 margin_top = 294.354
 margin_right = -847.5
 margin_bottom = -372.646
 
 [node name="SliderThree" parent="Control" instance=ExtResource( 7 )]
-visible = false
 margin_left = 107.381
 margin_top = 363.318
 margin_right = -847.62
 margin_bottom = -303.682
 
 [node name="SliderFour" parent="Control" instance=ExtResource( 8 )]
-visible = false
 margin_left = 107.441
 margin_top = 434.393
 margin_right = -843.559
 margin_bottom = -229.607
 
 [node name="SliderFive" parent="Control" instance=ExtResource( 9 )]
-visible = false
 margin_left = 107.002
 margin_top = 507.651
 margin_right = -847.998
