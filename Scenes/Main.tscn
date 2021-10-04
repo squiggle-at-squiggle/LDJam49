@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Code/Main.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/ControlPanel.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Sound/sfw-interior-drone-louder.mp3" type="AudioStream" id=7]
 [ext_resource path="res://Sound/sfx-success.mp3" type="AudioStream" id=8]
 [ext_resource path="res://Sound/sfx-negative.mp3" type="AudioStream" id=9]
+[ext_resource path="res://Scenes/MessageBox.tscn" type="PackedScene" id=10]
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
@@ -16,9 +17,14 @@ Puzzle = ExtResource( 5 )
 
 [node name="ControlPanel" parent="." instance=ExtResource( 2 )]
 
+[node name="MessageBox" parent="." instance=ExtResource( 10 )]
+layer = 2
+
 [node name="EndScreen" parent="." instance=ExtResource( 3 )]
+layer = 2
 
 [node name="StartScreen" parent="." instance=ExtResource( 4 )]
+layer = 2
 
 [node name="Countdown" parent="." instance=ExtResource( 6 )]
 margin_left = 915.181

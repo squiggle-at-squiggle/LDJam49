@@ -6,7 +6,7 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Panel.hide()
+	$Control.hide()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -15,8 +15,8 @@ func _ready():
 
 
 func create_message(message, time):
-	$Panel/CenteredDisplay.text = message
-	$Panel/CenteredDisplay.PRESET_CENTER
-	$Panel.show()
+	$Control/Panel/CenteredDisplay.text = message
+	$Control/Panel/CenteredDisplay.ALIGN_CENTER
+	$Control.show()
 	yield(get_tree().create_timer(time), "timeout")
-	$Panel.hide()
+	$Control.hide()
