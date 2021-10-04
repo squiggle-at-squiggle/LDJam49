@@ -19,10 +19,10 @@ Puzzle = ExtResource( 5 )
 [node name="StartScreen" parent="." instance=ExtResource( 4 )]
 
 [node name="Countdown" parent="." instance=ExtResource( 6 )]
-margin_left = 507.181
-margin_top = 523.501
-margin_right = 547.181
-margin_bottom = 563.501
+margin_left = 915.181
+margin_top = 515.501
+margin_right = 955.181
+margin_bottom = 555.501
 
 [node name="EngineNoise" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
