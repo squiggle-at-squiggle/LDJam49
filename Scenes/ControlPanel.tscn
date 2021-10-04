@@ -38,7 +38,7 @@ margin_top = 102.0
 margin_right = 108.0
 margin_bottom = 152.0
 custom_fonts/font = ExtResource( 15 )
-text = "Submit"
+text = "Start"
 __meta__ = {
 "_edit_use_anchors_": false
 }

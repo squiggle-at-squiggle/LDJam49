@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sfx-failure.mp3-31231f45e055f1d2856d21dbc56bdb75.mp3str"
+
+[deps]
+
+source_file="res://Sound/sfx-failure.mp3"
+dest_files=[ "res://.import/sfx-failure.mp3-31231f45e055f1d2856d21dbc56bdb75.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

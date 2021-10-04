@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sfx-negative.mp3-d8ec37765b14a75a8b6c3d2fb6adc8e8.mp3str"
+
+[deps]
+
+source_file="res://Sound/sfx-negative.mp3"
+dest_files=[ "res://.import/sfx-negative.mp3-d8ec37765b14a75a8b6c3d2fb6adc8e8.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
