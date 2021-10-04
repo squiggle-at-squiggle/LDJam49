@@ -1,11 +1,10 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Code/ControlPanel.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/SliderOne.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Art/lcars-viewbox-2.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/PlayerScreen.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/SliderTwo.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/MessageBox.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/SliderThree.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/SliderFour.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/SliderFive.tscn" type="PackedScene" id=9]
@@ -134,10 +133,6 @@ position = Vector2( 461, 130.2 )
 scale = Vector2( 0.529167, 0.7575 )
 texture = ExtResource( 3 )
 offset = Vector2( 528.189, 93.4653 )
-
-[node name="MessageBox" parent="." instance=ExtResource( 6 )]
-position = Vector2( 0, 660 )
-scroll_rate = 175
 
 [node name="SliderClickSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
