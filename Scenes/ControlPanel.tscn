@@ -48,7 +48,6 @@ position = Vector2( 443, 165 )
 line_color = "99CCFF"
 
 [node name="SliderOne" parent="Control" instance=ExtResource( 2 )]
-visible = false
 margin_left = 91.8492
 margin_top = 270.563
 margin_right = -863.151
