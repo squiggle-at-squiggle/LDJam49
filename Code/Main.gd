@@ -27,27 +27,17 @@ func NewGame():
 	new_round()
 
 
-func LoseGame():
-	$EngineNoise.stop()
-	$Countdown.turn_off()
-	get_tree().call_group("puzzle", "queue_free")
-	$EndScreen.SetText("You lose!")
-	$EndScreen/Control.show()
-	$EndScreen/FailureSound.play()
-	yield(get_tree().create_timer(3), "timeout")
-	$StartScreen/Control.show()
-
-
-func WinGame():
+func EndGame(text):
 	$EngineNoise.stop()
 	$Countdown.turn_off()
 	get_tree().call_group("puzzle", "queue_free")
 	$Countdown.stop_timer()
-	$EndScreen.SetText("You win!")
+	$EndScreen.SetText(text)
 	$EndScreen/Control.show()
-	$EndScreen/SuccessSound.play()
+	$EndScreen/FailureSound.play()
 	yield(get_tree().create_timer(3), "timeout")
 	$StartScreen/Control.show()
+	round_counter=0
 	
 func new_round():
 	if round_counter >= 1:
@@ -76,10 +66,8 @@ func verify_solution():
 
 func CheckSubmission():
 	if verify_solution() and total_rounds == round_counter:
-		WinGame()
-		round_counter=0
+		EndGame('You win!')
 	elif verify_solution():
 		new_round()
 	else:
-		LoseGame()
-		round_counter=0
+		EndGame('You lose!')
