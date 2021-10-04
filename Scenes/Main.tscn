@@ -3,7 +3,7 @@
 [ext_resource path="res://Code/Main.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/ControlPanel.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/EndScreen.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/StartScreen.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/StartMessage.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Puzzle.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Countdown.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Sound/sfw-interior-drone-louder.mp3" type="AudioStream" id=7]
@@ -23,9 +23,6 @@ layer = 2
 [node name="EndScreen" parent="." instance=ExtResource( 3 )]
 layer = 2
 
-[node name="StartScreen" parent="." instance=ExtResource( 4 )]
-layer = 2
-
 [node name="Countdown" parent="." instance=ExtResource( 6 )]
 margin_left = 915.181
 margin_top = 515.501
@@ -41,6 +38,10 @@ stream = ExtResource( 8 )
 [node name="Incorrect" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
 
+[node name="StartMessage" parent="." instance=ExtResource( 4 )]
+layer = 2
+offset = Vector2( 550, 90 )
+transform = Transform2D( 1, 0, 0, 1, 550, 90 )
+
 [connection signal="submitted" from="ControlPanel" to="." method="CheckSubmission"]
-[connection signal="start" from="StartScreen" to="." method="NewGame"]
 [connection signal="time_up" from="Countdown" to="." method="LoseGame"]

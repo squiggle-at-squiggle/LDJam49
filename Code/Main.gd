@@ -25,7 +25,7 @@ func _process(delta):
 func NewGame():
 	gameStarted = true
 	$ControlPanel/Control/PlayerScreen.hide()
-	$StartScreen/Control.hide()
+	$StartMessage/Control.hide()
 	$EndScreen/Control.hide()
 	$EngineNoise.play(3)
 	$Countdown.set_timer(90)
@@ -38,23 +38,32 @@ func LoseGame():
 	$EngineNoise.stop()
 	$Countdown.turn_off()
 	get_tree().call_group("puzzle", "queue_free")
+	current_puzzle.queue_free()
 	$EndScreen.SetText("You lose!")
 	$EndScreen/Control.show()
 	$EndScreen/FailureSound.play()
 	yield(get_tree().create_timer(3), "timeout")
-	$StartScreen/Control.show()
+	$EndScreen/Control.hide()
+	gameStarted = false
+	$ControlPanel/Control/Submit.text = "Start"
+	$StartMessage/Control.show()
+	
 
 
 func WinGame():
 	$EngineNoise.stop()
 	$Countdown.turn_off()
 	get_tree().call_group("puzzle", "queue_free")
+	current_puzzle.queue_free()
 	$Countdown.stop_timer()
 	$EndScreen.SetText("You win!")
 	$EndScreen/Control.show()
 	$EndScreen/SuccessSound.play()
 	yield(get_tree().create_timer(3), "timeout")
-	$StartScreen/Control.show()
+	$EndScreen/Control.hide()
+	gameStarted = false
+	$ControlPanel/Control/Submit.text = "Start"
+	$StartMessage/Control.show()
 	
 func new_round():
 	var verb = Verb()
