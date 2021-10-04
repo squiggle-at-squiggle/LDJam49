@@ -1,6 +1,24 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Code/SliderOne.gd" type="Script" id=1]
+[ext_resource path="res://Art/NewSliders/grabber1and4.png" type="Texture" id=2]
+[ext_resource path="res://Art/NewSliders/grabber1and4-highlight.png" type="Texture" id=4]
+[ext_resource path="res://Art/NewSliders/sliderbar1.png" type="Texture" id=5]
+[ext_resource path="res://Art/NewSliders/sliderprogress1.png" type="Texture" id=6]
+
+[sub_resource type="ImageTexture" id=1]
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 450, 75 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 75, 75 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 75, 75 )
 
 [node name="SliderOne" type="Control"]
 anchor_right = 1.0
@@ -14,9 +32,15 @@ __meta__ = {
 }
 
 [node name="HSlider" type="HSlider" parent="."]
-margin_right = 100.0
-margin_bottom = 16.0
-rect_scale = Vector2( 1, 2 )
+margin_right = 450.0
+margin_bottom = 100.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_icons/tick = SubResource( 1 )
+custom_icons/grabber_highlight = ExtResource( 4 )
+custom_icons/grabber = ExtResource( 2 )
+custom_styles/slider = SubResource( 2 )
+custom_styles/grabber_area_highlight = SubResource( 3 )
+custom_styles/grabber_area = SubResource( 4 )
 min_value = 1.0
 max_value = 6.0
 value = 1.0
