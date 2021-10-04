@@ -2,7 +2,7 @@ extends Node
 export(PackedScene) var Puzzle
 
 # Declare member variables here. Examples:
-var total_rounds = 3
+var total_rounds = 12
 var round_counter = 0
 var current_puzzle
 var solution1
@@ -62,9 +62,36 @@ func new_round():
 	solution5 = current_puzzle.solution5
 	$Countdown.set_timer(90)
 	round_counter += 1
-	# destroy current_puzzle
-	# create_new_puzzle
-	# increment round_counter
+	round_controller()
+	
+func round_controller():
+	#if round_counter == 1:
+	#	$ControlPanel/Control/SliderOne/HSlider.hide()
+	#	$ControlPanel/Control/SliderTwo/HSlider.hide()
+	#	$ControlPanel/Control/SliderThree/HSlider.hide()
+	#	$ControlPanel/Control/SliderFour/HSlider.hide()
+	#	$ControlPanel/Control/SliderFive/HSlider.hide()
+	if round_counter <= 3:
+		$ControlPanel/Control/SliderOne.show()
+		#set submissions 2-5 to correct
+		$ControlPanel/Control/SliderTwo/HSlider.value = solution2
+		$ControlPanel/Control/SliderThree/HSlider.value  = solution3
+		$ControlPanel/Control/SliderFour/HSlider.value  = solution4
+		$ControlPanel/Control/SliderFive/HSlider.value  = solution5
+	if round_counter >= 4 and  round_counter <= 6:
+		$ControlPanel/Control/SliderTwo.show()
+		#set submissions 3-5 to correct
+		$ControlPanel/Control/SliderThree/HSlider.value  = solution3
+		$ControlPanel/Control/SliderFour/HSlider.value  = solution4
+		$ControlPanel/Control/SliderFive/HSlider.value  = solution5
+	if round_counter >= 7 and  round_counter <= 9: 
+		$ControlPanel/Control/SliderThree.show()
+		#set submissions 3-5 to correct
+		$ControlPanel/Control/SliderFour/HSlider.value  = solution4
+		$ControlPanel/Control/SliderFive/HSlider.value  = solution5
+	if round_counter >= 10 and  round_counter <= 12: 
+		$ControlPanel/Control/SliderFour.show()
+		$ControlPanel/Control/SliderFive.show()
 	
 
 func verify_solution():
