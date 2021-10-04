@@ -11,10 +11,11 @@ var solution2
 var solution3
 var solution4
 var solution5
+var gameStarted
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	gameStarted = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -22,14 +23,18 @@ func _process(delta):
 	time = time + (3 * delta)
 
 func NewGame():
+	gameStarted = true
 	$ControlPanel/Control/PlayerScreen.hide()
 	$StartScreen/Control.hide()
 	$EndScreen/Control.hide()
 	$EngineNoise.play(3)
+	$Countdown.set_timer(90)
 	new_round()
 
 
 func LoseGame():
+	round_counter=0
+	hide_all_toggles()
 	$EngineNoise.stop()
 	$Countdown.turn_off()
 	get_tree().call_group("puzzle", "queue_free")
@@ -54,9 +59,14 @@ func WinGame():
 func new_round():
 	var verb = Verb()
 	var message = verb + " the " + TechnoBabble()
+	$ControlPanel/Control/Submit.hide()
+	$Countdown/Countdown.set_paused(true)
 	$ControlPanel/MessageBox.create_message(message, 3)
+	$ControlPanel/Control/Submit.text = verb
 	yield(get_tree().create_timer(3), "timeout")
+	$ControlPanel/Control/Submit.show()
 	$ControlPanel/Control/PlayerScreen.show()
+	$Countdown/Countdown.set_paused(false)
 	if round_counter >= 1:
 		current_puzzle.queue_free()
 	current_puzzle = Puzzle.instance()
@@ -67,7 +77,6 @@ func new_round():
 	solution3 = current_puzzle.solution3
 	solution4 = current_puzzle.solution4
 	solution5 = current_puzzle.solution5
-	$Countdown.set_timer(90)
 	round_counter += 1
 	round_controller()
 	
@@ -108,16 +117,23 @@ func verify_solution():
 
 
 func CheckSubmission():
-	if verify_solution() and total_rounds == round_counter:
+	if !gameStarted:
+		$ControlPanel/Control/Submit.hide()
+		NewGame()
+		gameStarted = true
+	elif verify_solution() and total_rounds == round_counter:
+		$ControlPanel/Control/Submit.hide()
 		WinGame()
 		round_counter=0
 		hide_all_toggles()
 	elif verify_solution():
+		$ControlPanel/Control/Submit.hide()
+		$Correct.play()
+		$Countdown.increase_time(15)
 		new_round()
 	else:
-		LoseGame()
-		round_counter=0
-		hide_all_toggles()
+		$Incorrect.play()
+		$Countdown.decrease_time(5)
 
 func Verb():
 	var verb = ["Harmonize", "Fluctuate", "Consolidate"]
