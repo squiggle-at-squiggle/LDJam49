@@ -12,17 +12,13 @@ func _ready():
 	is_active = false
 	message_rotation = $Label.get_rotation()
 	$Label.hide()
+	$Panel/CenteredDisplay.hide()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if is_active:
 		$Label.rect_position.x -= scroll_rate * delta
-
-func create_message(text):
-	$Label.text = text
-	is_active = true
-	set_message_scroll()
 
 
 func end_message():
@@ -38,3 +34,14 @@ func _on_VisibilityNotifier2D_screen_exited():
 		set_message_scroll()
 	else:
 		$Label.hide()
+
+func create_message(message, time):
+	$Label.hide()
+	$Label.text = message
+	$Panel/CenteredDisplay.text = message
+	$Panel/CenteredDisplay.PRESET_CENTER
+	$Panel/CenteredDisplay.show()
+	yield(get_tree().create_timer(time), "timeout")
+	$Panel/CenteredDisplay.hide()
+	is_active = true
+	set_message_scroll()
