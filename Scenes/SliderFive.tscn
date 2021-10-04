@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scenes/SliderOne.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Art/NewSliders/grabber5-highlight.png" type="Texture" id=2]
 [ext_resource path="res://Art/NewSliders/sliderbar5.png" type="Texture" id=3]
 [ext_resource path="res://Art/NewSliders/grabber3-sliderprogress5.png" type="Texture" id=4]
 [ext_resource path="res://Art/NewSliders/grabber5-sliderprogress2.png" type="Texture" id=5]
+[ext_resource path="res://Art/NewSliders/slider5-cap.png" type="Texture" id=6]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 3 )
@@ -33,3 +34,6 @@ custom_styles/grabber_area = SubResource( 3 )
 min_value = 0.0
 max_value = 1.0
 tick_count = 2
+
+[node name="Sprite2" parent="." index="2"]
+texture = ExtResource( 6 )

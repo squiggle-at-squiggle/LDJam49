@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Code/ControlPanel.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/SliderOne.tscn" type="PackedScene" id=2]
@@ -15,7 +15,6 @@
 [ext_resource path="res://Art/shape-does-nothing-2.png" type="Texture" id=13]
 [ext_resource path="res://Art/another-sdn-2.png" type="Texture" id=14]
 [ext_resource path="res://Fonts/button-font.tres" type="DynamicFont" id=15]
-[ext_resource path="res://Scenes/LeftKnobShape.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Art/brown-swoop.png" type="Texture" id=17]
 
 [sub_resource type="Theme" id=1]
@@ -84,33 +83,37 @@ line_color = "ff9900"
 anchor_top = 0.000694444
 anchor_bottom = 1.00069
 margin_left = 107.349
-margin_top = 229.563
+margin_top = 200.563
 margin_right = -847.651
-margin_bottom = -437.437
+margin_bottom = -466.437
 
 [node name="SliderTwo" parent="Control" instance=ExtResource( 5 )]
+visible = false
 margin_left = 107.5
-margin_top = 294.354
+margin_top = 287.354
 margin_right = -847.5
-margin_bottom = -372.646
+margin_bottom = -379.646
 
 [node name="SliderThree" parent="Control" instance=ExtResource( 7 )]
+visible = false
 margin_left = 107.381
-margin_top = 363.318
+margin_top = 378.318
 margin_right = -847.62
-margin_bottom = -303.682
+margin_bottom = -288.682
 
 [node name="SliderFour" parent="Control" instance=ExtResource( 8 )]
+visible = false
 margin_left = 107.441
-margin_top = 434.393
+margin_top = 468.393
 margin_right = -843.559
-margin_bottom = -229.607
+margin_bottom = -195.607
 
 [node name="SliderFive" parent="Control" instance=ExtResource( 9 )]
+visible = false
 margin_left = 107.002
-margin_top = 507.651
+margin_top = 554.651
 margin_right = -847.998
-margin_bottom = -159.349
+margin_bottom = -112.349
 
 [node name="Label" type="Label" parent="Control"]
 margin_left = 646.707
@@ -123,21 +126,6 @@ text = "WARP ENGINEER SIMULATOR"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Left knob shape" parent="Control" instance=ExtResource( 16 )]
-position = Vector2( 85.5, 256 )
-
-[node name="Left knob shape2" parent="Control" instance=ExtResource( 16 )]
-position = Vector2( 87.5, 320 )
-
-[node name="Left knob shape3" parent="Control" instance=ExtResource( 16 )]
-position = Vector2( 83, 387.5 )
-
-[node name="Left knob shape4" parent="Control" instance=ExtResource( 16 )]
-position = Vector2( 83.5, 457.5 )
-
-[node name="Left knob shape5" parent="Control" instance=ExtResource( 16 )]
-position = Vector2( 86, 534 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 521.502, 191.833 )
