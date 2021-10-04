@@ -17,13 +17,24 @@ func _process(_delta):
 	else:
 		alarm_off()
 
+
 func set_timer(initial_time):
 	$Countdown.wait_time = initial_time
 	$Countdown.start()
 	active = true
 
-# func increase_time(_increase_amount):
-	#$Countdown.wait_time
+
+func increase_time(_increase_amount):
+	var increasedAmount = clamp(_increase_amount, 0, 99 - $Countdown.time_left)
+	$Countdown.wait_time = $Countdown.time_left + increasedAmount
+	$Countdown.start()
+
+
+func decrease_time(_decrease_amount):
+	var decreasedAmount = clamp(_decrease_amount, 0, $Countdown.time_left)
+	$Countdown.wait_time = $Countdown.time_left - decreasedAmount
+	$Countdown.start()
+
 
 func stop_timer():
 	$Countdown.stop()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Code/Main.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/ControlPanel.tscn" type="PackedScene" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://Scenes/Puzzle.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Countdown.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Sound/sfw-interior-drone-louder.mp3" type="AudioStream" id=7]
+[ext_resource path="res://Sound/sfx-success.mp3" type="AudioStream" id=8]
+[ext_resource path="res://Sound/sfx-negative.mp3" type="AudioStream" id=9]
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
@@ -26,6 +28,12 @@ margin_bottom = 555.501
 
 [node name="EngineNoise" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
+
+[node name="Correct" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+
+[node name="Incorrect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
 
 [connection signal="submitted" from="ControlPanel" to="." method="CheckSubmission"]
 [connection signal="start" from="StartScreen" to="." method="NewGame"]
