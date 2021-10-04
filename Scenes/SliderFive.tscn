@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/SliderOne.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Art/NewSliders/grabber5-highlight.png" type="Texture" id=2]
@@ -14,6 +14,10 @@ region_rect = Rect2( 0, 0, 450, 75 )
 texture = ExtResource( 4 )
 region_rect = Rect2( 0, 0, 100, 100 )
 
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 100, 100 )
+
 [node name="SliderFive" instance=ExtResource( 1 )]
 
 [node name="HSlider" parent="." index="0"]
@@ -24,7 +28,8 @@ margin_right = 117.707
 custom_icons/grabber_highlight = ExtResource( 2 )
 custom_icons/grabber = ExtResource( 5 )
 custom_styles/slider = SubResource( 1 )
-custom_styles/grabber_area = SubResource( 2 )
+custom_styles/grabber_area_highlight = SubResource( 2 )
+custom_styles/grabber_area = SubResource( 3 )
 min_value = 0.0
 max_value = 1.0
 tick_count = 2

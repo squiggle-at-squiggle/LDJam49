@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Code/ControlPanel.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/SliderOne.tscn" type="PackedScene" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Art/shape-does-nothing-2.png" type="Texture" id=13]
 [ext_resource path="res://Art/another-sdn-2.png" type="Texture" id=14]
 [ext_resource path="res://Fonts/button-font.tres" type="DynamicFont" id=15]
+[ext_resource path="res://Scenes/LeftKnobShape.tscn" type="PackedScene" id=16]
 
 [node name="ControlPanel" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -22,8 +23,10 @@ script = ExtResource( 1 )
 [node name="Control" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -2.35358
-margin_right = -2.35352
+margin_left = -25.8536
+margin_top = 7.25
+margin_right = -25.8535
+margin_bottom = 7.25
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -54,24 +57,28 @@ margin_right = -847.651
 margin_bottom = -437.437
 
 [node name="SliderTwo" parent="Control" instance=ExtResource( 5 )]
+visible = false
 margin_left = 107.5
 margin_top = 294.354
 margin_right = -847.5
 margin_bottom = -372.646
 
 [node name="SliderThree" parent="Control" instance=ExtResource( 7 )]
+visible = false
 margin_left = 107.381
 margin_top = 363.318
 margin_right = -847.62
 margin_bottom = -303.682
 
 [node name="SliderFour" parent="Control" instance=ExtResource( 8 )]
+visible = false
 margin_left = 107.441
 margin_top = 434.393
 margin_right = -843.559
 margin_bottom = -229.607
 
 [node name="SliderFive" parent="Control" instance=ExtResource( 9 )]
+visible = false
 margin_left = 107.002
 margin_top = 507.651
 margin_right = -847.998
@@ -106,6 +113,9 @@ text = "controls"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Left knob shape" parent="Control" instance=ExtResource( 16 )]
+position = Vector2( 85.5, 256 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 461, 130.2 )
