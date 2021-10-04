@@ -12,12 +12,14 @@ var t
 func _ready():
 	update()
 	
-func _process(delta):
+func _process(_delta):
 	t = get_tree().get_root().get_node("Main").get("time")
 	update()
 
 func _draw():
 	# Create an Expression from the formula
+	if !t:
+		return
 	var input_names = PoolStringArray(["x"])
 	var expression = Expression.new()
 	var expression_format = "%s*sin(%s*x + %s) + %s*cos(%s*x + %s)"
