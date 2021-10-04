@@ -45,9 +45,9 @@ func LoseGame():
 	yield(get_tree().create_timer(3), "timeout")
 	$EndScreen/Control.hide()
 	gameStarted = false
-	$ControlPanel/Control/Submit.text = "Start"
+	$ControlPanel/Control/Submit.text = "Engage"
 	$StartMessage/Control.show()
-	
+	$ControlPanel/Control/Submit.show()
 
 
 func WinGame():
@@ -62,8 +62,9 @@ func WinGame():
 	yield(get_tree().create_timer(3), "timeout")
 	$EndScreen/Control.hide()
 	gameStarted = false
-	$ControlPanel/Control/Submit.text = "Start"
+	$ControlPanel/Control/Submit.text = "Engage"
 	$StartMessage/Control.show()
+	$ControlPanel/Control/Submit.show()
 	
 func new_round():
 	var verb = Verb()

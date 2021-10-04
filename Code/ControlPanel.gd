@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 signal submitted
+signal credits
 
 # Declare member variables here. Examples:
 var submission = 0
@@ -58,3 +59,7 @@ func _on_SliderFour_changed():
 	$Control/PlayerScreen.draw_from_puzzle($Control/SliderOne/HSlider.value, 
 		$Control/SliderTwo/HSlider.value, $Control/SliderThree/HSlider.value,
 		$Control/SliderFour/HSlider.value, $Control/SliderFive/HSlider.value)
+
+
+func _on_Credits_pressed():
+	emit_signal("credits")
