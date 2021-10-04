@@ -1,0 +1,70 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Fonts/title-font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Fonts/button-font.tres" type="DynamicFont" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 1 )
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+margin_right = 400.0
+margin_bottom = 233.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DevelopedBy" type="Label" parent="Control/Panel"]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 1 )
+text = "Developed By"
+
+[node name="Names" type="Label" parent="Control/Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -160.0
+margin_top = 30.0
+margin_right = -49.0
+margin_bottom = 87.0
+custom_fonts/font = ExtResource( 2 )
+text = "Bobby Brace
+Naomi Sprague
+Sarah Sprague"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AdditionalAssets" type="Label" parent="Control/Panel"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -7.0
+margin_right = 40.0
+margin_bottom = 7.0
+custom_fonts/font = ExtResource( 1 )
+text = "Additional Assets"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="List" type="Label" parent="Control/Panel"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 40.0
+margin_top = 33.5
+margin_right = 80.0
+margin_bottom = 50.5
+custom_fonts/font = ExtResource( 2 )
+text = "Fonts - http://www.iconian.com/
+Fonts - http://www.southype.com
+SFX - zapsplat.com
+Colors - https://codepen.io/Mokurunner/details/eqtHl"
