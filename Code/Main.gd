@@ -72,7 +72,6 @@ func verify_solution():
 		return true
 	else:
 		return false
-	
 
 
 func CheckSubmission():
