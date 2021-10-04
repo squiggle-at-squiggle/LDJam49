@@ -22,6 +22,7 @@ func _process(delta):
 
 
 func end_message():
+	$Panel/CenteredDisplay.hide()
 	is_active = false
 
 
