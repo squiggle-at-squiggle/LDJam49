@@ -51,6 +51,10 @@ func WinGame():
 	$StartScreen/Control.show()
 	
 func new_round():
+	var verb = Verb()
+	var message = verb + " the " + TechnoBabble()
+	$ControlPanel/MessageBox.create_message(message, 3)
+	$ControlPanel/Control/Submit.text = verb
 	if round_counter >= 1:
 		current_puzzle.queue_free()
 	current_puzzle = Puzzle.instance()
@@ -113,3 +117,12 @@ func CheckSubmission():
 		LoseGame()
 		round_counter=0
 		hide_all_toggles()
+
+func Verb():
+	var verb = ["Harmonize", "Fluctuate"]
+	return verb[randi() % verb.size()]
+
+
+func TechnoBabble():
+	var technoBabble = ["quantum filament", "anti-matter"]
+	return technoBabble[randi() % technoBabble.size()]
