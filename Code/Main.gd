@@ -118,10 +118,10 @@ func CheckSubmission():
 		hide_all_toggles()
 
 func Verb():
-	var verb = ["Harmonize", "Fluctuate"]
+	var verb = ["Harmonize", "Fluctuate", "Consolidate"]
 	return verb[randi() % verb.size()]
 
 
 func TechnoBabble():
-	var technoBabble = ["quantum filament", "anti-matter"]
+	var technoBabble = ["quantum filament", "anti-matter", "subsection cryptography"]
 	return technoBabble[randi() % technoBabble.size()]
