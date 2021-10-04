@@ -154,12 +154,12 @@ func CheckSubmission():
 		$Countdown.decrease_time(5)
 
 func Verb():
-	var verb = ["Harmonize", "Fluctuate", "Consolidate"]
+	var verb = ["Harmonize", "Fluctuate", "Consolidate", "Adjust", "Focus", "Invert", "Emulsify", "Bisect"]
 	return verb[randi() % verb.size()]
 
 
 func TechnoBabble():
-	var technoBabble = ["quantum filament", "anti-matter", "subsection cryptography"]
+	var technoBabble = ["quantum filament", "anti-matter", "subsection cryptography", "coolant rotation", "beam emitter", "crystal resonance", "plasma flow rate", "power reciever"]
 	return technoBabble[randi() % technoBabble.size()]
 
 
