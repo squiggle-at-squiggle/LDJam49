@@ -1,6 +1,19 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Code/SliderOne.gd" type="Script" id=1]
+[ext_resource path="res://Art/NewSliders/grabber2-highlight.png" type="Texture" id=2]
+[ext_resource path="res://Art/NewSliders/sliderbar2.png" type="Texture" id=3]
+[ext_resource path="res://Art/NewSliders/grabber5-sliderprogress2.png" type="Texture" id=4]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 450, 75 )
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 100, 100 )
+
+[sub_resource type="StyleBoxEmpty" id=3]
 
 [node name="SliderOne" type="Control"]
 anchor_right = 1.0
@@ -14,9 +27,16 @@ __meta__ = {
 }
 
 [node name="HSlider" type="HSlider" parent="."]
-margin_right = 100.0
-margin_bottom = 16.0
-rect_scale = Vector2( 1, 2 )
+margin_left = 1.41422
+margin_top = 3.53552
+margin_right = 451.414
+margin_bottom = 103.536
+rect_scale = Vector2( 0.5, 0.5 )
+custom_icons/grabber_highlight = ExtResource( 2 )
+custom_icons/grabber = ExtResource( 2 )
+custom_styles/slider = SubResource( 1 )
+custom_styles/grabber_area_highlight = SubResource( 2 )
+custom_styles/grabber_area = SubResource( 3 )
 min_value = 1.0
 max_value = 6.0
 value = 1.0
