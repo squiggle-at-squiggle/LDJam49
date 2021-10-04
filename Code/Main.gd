@@ -121,6 +121,7 @@ func round_controller():
 		$ControlPanel/Control/SliderFive.show()
 	
 func hide_all_toggles():
+	$ControlPanel/Control/SliderOne.hide()
 	$ControlPanel/Control/SliderTwo.hide()
 	$ControlPanel/Control/SliderThree.hide()
 	$ControlPanel/Control/SliderFour.hide()
