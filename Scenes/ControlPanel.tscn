@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Code/ControlPanel.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/SliderOne.tscn" type="PackedScene" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Art/shape-does-nothing-2.png" type="Texture" id=13]
 [ext_resource path="res://Art/another-sdn-2.png" type="Texture" id=14]
 [ext_resource path="res://Fonts/button-font.tres" type="DynamicFont" id=15]
+[ext_resource path="res://Art/NewSliders/left-knob.png" type="Texture" id=16]
 [ext_resource path="res://Art/brown-swoop.png" type="Texture" id=17]
 
 [sub_resource type="Theme" id=1]
@@ -32,9 +33,9 @@ script = ExtResource( 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -3.06067
-margin_top = 2.12126
+margin_top = 2.82841
 margin_right = -3.06055
-margin_bottom = 2.12128
+margin_bottom = 2.82843
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -191,6 +192,12 @@ stream = ExtResource( 11 )
 position = Vector2( 329.408, 45.1915 )
 scale = Vector2( 0.520715, 0.294518 )
 texture = ExtResource( 13 )
+
+[node name="Bubble" type="Sprite" parent="."]
+position = Vector2( 997.02, 455.023 )
+rotation = 3.14159
+scale = Vector2( 0.442288, 0.418717 )
+texture = ExtResource( 16 )
 
 [connection signal="pressed" from="Control/Submit" to="." method="_on_Submit_pressed"]
 [connection signal="pressed" from="Control/Credits" to="." method="_on_Credits_pressed"]

@@ -32,6 +32,9 @@ func increase_time(_increase_amount):
 
 func decrease_time(_decrease_amount):
 	var decreasedAmount = clamp(_decrease_amount, 0, $Countdown.time_left)
+	var wait_time_set = $Countdown.time_left - decreasedAmount
+	if wait_time_set <= 0:
+		wait_time_set = 0
 	$Countdown.wait_time = $Countdown.time_left - decreasedAmount
 	$Countdown.start()
 
