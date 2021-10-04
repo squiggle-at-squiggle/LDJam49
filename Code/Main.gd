@@ -2,6 +2,7 @@ extends Node
 export(PackedScene) var Puzzle
 
 # Declare member variables here. Examples:
+export var time = 0
 var total_rounds = 12
 var round_counter = 0
 var current_puzzle
@@ -17,8 +18,8 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	time = time + (3 * delta)
 
 func NewGame():
 	$StartScreen/Control.hide()
