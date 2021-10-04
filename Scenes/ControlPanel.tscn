@@ -57,24 +57,28 @@ margin_right = -847.651
 margin_bottom = -437.437
 
 [node name="SliderTwo" parent="Control" instance=ExtResource( 5 )]
+visible = false
 margin_left = 107.5
 margin_top = 294.354
 margin_right = -847.5
 margin_bottom = -372.646
 
 [node name="SliderThree" parent="Control" instance=ExtResource( 7 )]
+visible = false
 margin_left = 107.381
 margin_top = 363.318
 margin_right = -847.62
 margin_bottom = -303.682
 
 [node name="SliderFour" parent="Control" instance=ExtResource( 8 )]
+visible = false
 margin_left = 107.441
 margin_top = 434.393
 margin_right = -843.559
 margin_bottom = -229.607
 
 [node name="SliderFive" parent="Control" instance=ExtResource( 9 )]
+visible = false
 margin_left = 107.002
 margin_top = 507.651
 margin_right = -847.998
@@ -93,16 +97,16 @@ __meta__ = {
 }
 
 [node name="ShapeThingDoesNothing2" type="Sprite" parent="Control"]
-position = Vector2( 176.324, 175.525 )
-scale = Vector2( 0.41513, 0.357899 )
+position = Vector2( 181.274, 115.388 )
+scale = Vector2( 0.41513, 0.408852 )
 texture = ExtResource( 14 )
 offset = Vector2( 235.159, 611.249 )
 
 [node name="Label2" type="Label" parent="Control"]
-margin_left = 257.0
-margin_top = 167.0
-margin_right = 400.0
-margin_bottom = 192.0
+margin_left = 243.565
+margin_top = 109.724
+margin_right = 386.565
+margin_bottom = 134.724
 custom_fonts/font = ExtResource( 12 )
 custom_colors/font_color = Color( 1, 0.6, 0, 1 )
 text = "controls"
@@ -142,7 +146,6 @@ stream = ExtResource( 10 )
 stream = ExtResource( 11 )
 
 [node name="ShapeThingDoesNothing" type="Sprite" parent="."]
-visible = false
 position = Vector2( 329.408, 45.1915 )
 scale = Vector2( 0.520715, 0.294518 )
 texture = ExtResource( 13 )
