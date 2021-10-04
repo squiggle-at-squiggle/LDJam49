@@ -36,6 +36,7 @@ func _on_VisibilityNotifier2D_screen_exited():
 		$Label.hide()
 
 func create_message(message, time):
+	$Label.hide()
 	$Label.text = message
 	$Panel/CenteredDisplay.text = message
 	$Panel/CenteredDisplay.PRESET_CENTER
