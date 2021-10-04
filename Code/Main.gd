@@ -53,7 +53,10 @@ func LoseGame():
 	$ControlPanel/Control/Submit.text = "Engage"
 	$StartMessage/Control.show()
 	$ControlPanel/Control/Submit.show()
+<<<<<<< HEAD
 	$ControlPanel/Control/Credits.show()
+=======
+>>>>>>> main
 
 
 func WinGame():
@@ -71,7 +74,10 @@ func WinGame():
 	$ControlPanel/Control/Submit.text = "Engage"
 	$StartMessage/Control.show()
 	$ControlPanel/Control/Submit.show()
+<<<<<<< HEAD
 	$ControlPanel/Control/Credits.show()
+=======
+>>>>>>> main
 	
 func new_round():
 	var verb = Verb()

@@ -63,4 +63,7 @@ func _on_SliderFour_changed():
 
 func _on_Credits_pressed():
 	emit_signal("credits")
+<<<<<<< HEAD
 	$ButtonPressSound.play()
+=======
+>>>>>>> main
