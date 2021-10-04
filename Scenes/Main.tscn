@@ -39,6 +39,7 @@ stream = ExtResource( 8 )
 stream = ExtResource( 9 )
 
 [node name="StartMessage" parent="." instance=ExtResource( 4 )]
+layer = 2
 offset = Vector2( 550, 90 )
 transform = Transform2D( 1, 0, 0, 1, 550, 90 )
 
