@@ -10,8 +10,8 @@ bg_color = Color( 0, 0, 0, 1 )
 script = ExtResource( 1 )
 
 [node name="Panel" type="Panel" parent="."]
-margin_right = 1080.0
-margin_bottom = 60.0
+margin_right = 1000.0
+margin_bottom = 540.0
 custom_styles/panel = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -23,32 +23,16 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -441.0
-margin_top = -22.5
-margin_right = 441.0
-margin_bottom = 22.5
+margin_top = -92.0
+margin_right = 482.0
+margin_bottom = 328.0
 custom_fonts/font = ExtResource( 2 )
 text = "Press start to begin"
 align = 1
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="EntryPoint" type="Node2D" parent="."]
 position = Vector2( 1080, 10 )
-
-[node name="Label" type="Label" parent="."]
-visible = false
-margin_top = 10.0
-margin_right = 101.0
-margin_bottom = 55.0
-custom_fonts/font = ExtResource( 2 )
-text = "DEBUG"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="Label"]
-position = Vector2( 99.1765, 12.554 )
-rect = Rect2( 0, 0, 20, 20 )
-
-[connection signal="screen_exited" from="Label/VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
