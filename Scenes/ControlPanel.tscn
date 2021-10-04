@@ -54,32 +54,28 @@ margin_right = -863.151
 margin_bottom = -396.437
 
 [node name="SliderTwo" parent="Control" instance=ExtResource( 5 )]
-visible = false
-margin_left = 63.0
-margin_top = 359.854
-margin_right = -892.0
-margin_bottom = -307.146
+margin_left = 107.5
+margin_top = 294.354
+margin_right = -847.5
+margin_bottom = -372.646
 
 [node name="SliderThree" parent="Control" instance=ExtResource( 7 )]
-visible = false
-margin_left = 95.3805
-margin_top = 427.318
-margin_right = -859.62
-margin_bottom = -239.682
+margin_left = 107.381
+margin_top = 363.318
+margin_right = -847.62
+margin_bottom = -303.682
 
 [node name="SliderFour" parent="Control" instance=ExtResource( 8 )]
-visible = false
-margin_left = 100.941
-margin_top = 480.393
-margin_right = -850.059
-margin_bottom = -183.607
+margin_left = 107.441
+margin_top = 434.393
+margin_right = -843.559
+margin_bottom = -229.607
 
 [node name="SliderFive" parent="Control" instance=ExtResource( 9 )]
-visible = false
-margin_left = 99.5018
-margin_top = 536.151
-margin_right = -855.498
-margin_bottom = -130.849
+margin_left = 107.002
+margin_top = 507.651
+margin_right = -847.998
+margin_bottom = -159.349
 
 [node name="Label" type="Label" parent="Control"]
 margin_left = 640.707
@@ -110,6 +106,21 @@ text = "controls"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Left knob shape" parent="Control" instance=ExtResource( 16 )]
+position = Vector2( 85.5, 256 )
+
+[node name="Left knob shape2" parent="Control" instance=ExtResource( 16 )]
+position = Vector2( 87.5, 320 )
+
+[node name="Left knob shape3" parent="Control" instance=ExtResource( 16 )]
+position = Vector2( 83, 387.5 )
+
+[node name="Left knob shape4" parent="Control" instance=ExtResource( 16 )]
+position = Vector2( 83.5, 457.5 )
+
+[node name="Left knob shape5" parent="Control" instance=ExtResource( 16 )]
+position = Vector2( 86, 534 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 461, 130.2 )
