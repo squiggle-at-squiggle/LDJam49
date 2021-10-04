@@ -24,7 +24,7 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = 585.0
-margin_bottom = 188.0
+margin_bottom = 299.0
 custom_styles/panel = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -45,9 +45,9 @@ __meta__ = {
 anchor_top = 0.5
 anchor_bottom = 0.5
 margin_left = 40.0
-margin_top = -170.5
+margin_top = -204.054
 margin_right = 290.0
-margin_bottom = -44.5
+margin_bottom = -78.0541
 custom_fonts/font = ExtResource( 2 )
 text = "Bobby Brace
 Naomi Sprague
@@ -80,4 +80,5 @@ custom_fonts/font = ExtResource( 2 )
 text = "Fonts - http://www.iconian.com/
 Fonts - http://www.southype.com
 SFX - zapsplat.com
-Colors - https://codepen.io/Mokurunner/details/eqtHl"
+Colors - https://codepen.io/Mokurunner/details/eqtHl
+Graph Code - https://godotengine.org/qa/user/Zylann"
