@@ -23,10 +23,8 @@ script = ExtResource( 1 )
 [node name="Control" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -25.8536
-margin_top = 7.25
-margin_right = -25.8535
-margin_bottom = 7.25
+margin_left = -2.35358
+margin_right = -2.35352
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -51,10 +49,10 @@ position = Vector2( 443, 165 )
 line_color = "99CCFF"
 
 [node name="SliderOne" parent="Control" instance=ExtResource( 2 )]
-margin_left = 107.349
-margin_top = 229.563
-margin_right = -847.651
-margin_bottom = -437.437
+margin_left = 107.0
+margin_top = 230.25
+margin_right = -744.0
+margin_bottom = -436.75
 
 [node name="SliderTwo" parent="Control" instance=ExtResource( 5 )]
 visible = false
